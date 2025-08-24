@@ -66,17 +66,10 @@ const KeyFeatures = () => {
                     className="flex flex-wrap justify-between"
                 >
                     <div className="overflow-hidden relative w-full">
-                        {/* Левый градиент */}
-                        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 
-                                        bg-gradient-to-r from-black to-transparent z-10" />
-
-                        {/* Правый градиент */}
-                        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 
-                                        bg-gradient-to-l from-black to-transparent z-10" />
 
                         <Swiper
                             modules={[Autoplay]}
-                            slidesPerView="auto"
+                            slidesPerView={3}
                             spaceBetween={10}
                             speed={1000} // скорость
                             autoplay={{
@@ -107,7 +100,7 @@ const KeyFeatures = () => {
                             {gifs.map((src, idx) => (
                             <SwiperSlide
                                 key={idx}
-                                className="!w-36 !h-20 md:!w-96 md:!h-72 rounded-xl overflow-hidden"  
+                                className="rounded-xl overflow-hidden"  
                             >
                                 <img 
                                 src={src} 
