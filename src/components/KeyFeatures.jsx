@@ -1,5 +1,7 @@
 import { motion } from "framer-motion"
 import { KEY_FEATURES_CONTENT } from "../constants"
+import { useRef, useEffect, useState } from "react";
+
 import gif1 from "../assets/gif_1.gif";
 import gif2 from "../assets/gif_2.gif";
 import gif3 from "../assets/gif_3.gif";
@@ -7,10 +9,12 @@ import gif4 from "../assets/gif_4.gif";
 import gif5 from "../assets/gif_5.gif";
 import gif6 from "../assets/gif_6.gif";
 import gif7 from "../assets/gif_7.gif";
-// import gif8 from "../assets/gif_8.gif";
-// import gif1 from "../assets/gif_1.gif";
+
 
 const KeyFeatures = () => {
+
+    const gifs = [ gif1,gif2,gif3,gif4,gif5,gif6,gif7 ]
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -33,19 +37,29 @@ const KeyFeatures = () => {
         }
     }
 
-    const gifs = [
-        gif1,gif2,gif3,gif4,gif5,gif6,gif7
-    ]
+    const trackRef = useRef(null);
+    const [trackWidth, setTrackWidth] = useState(0);
+
+    useEffect(() => {
+        if (trackRef.current) {
+        setTrackWidth(trackRef.current.scrollWidth / 2); // ширина половины (т.е. 1 набора)
+        }
+    }, [gifs]);
+
+
+
     return (
         <section className="">
             <div className="max-w-7xl mx-auto px-4 my-20">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut"}}div className="text-center mb-12 border-t border-neutral-800">
+                    transition={{ duration: 0.6, ease: "easeOut"}}
+                    className="text-center mb-12 border-t border-neutral-800"
+                >
                     <h2 className="text-3xl lg:text-5xl mt-20 tracking-tighter
                     bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
-                    bg-clip-text text-transparent">
+                    bg-clip-text text-transparent select-none">
                         {KEY_FEATURES_CONTENT.sectionTitle}
                     </h2>
                     {/* <p className="mt-4">
@@ -69,22 +83,23 @@ const KeyFeatures = () => {
                                         bg-gradient-to-l from-black to-transparent z-10" />
 
                         <motion.div
-                            animate={{ x: ["0%", "-50%"] }}
-                            transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+                            animate={{ x: [0, -trackWidth] }}
+                            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
                             className="flex"
                         >
                             {[...Array(2)].map((_, i) => (
-                            <div key={i} className="flex">
+                            <div key={i} ref={i === 0 ? trackRef : null} className="flex">
                                 {gifs.map((src, idx) => (
-                                <motion.div 
+                                <motion.div
+                                    key={`${i}-${idx}`}
                                     variants={featureVariants}
                                     className="w-60 h-52 md:w-96 md:h-80 overflow-hidden rounded-xl mx-2">
                                     <img 
-                                    key={`${i}-${idx}`} 
-                                    src={src} 
-                                    alt={`gif-${idx}`} 
-                                    className="w-full h-full object-cover object-center"
-                                />
+                                        key={`${i}-${idx}`} 
+                                        src={src} 
+                                        alt={`gif-${idx}`} 
+                                        className="w-full h-full object-cover object-center"
+                                    />
                                 </motion.div>
                                 ))}
                             </div>
