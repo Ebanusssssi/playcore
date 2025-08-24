@@ -28,7 +28,7 @@ const HeroSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="pt-28 md:pt-28 lg:pt-36 md:h-screen relative">
+        className="pt-28 md:pt-28 lg:pt-36 h-[70vh] md:h-screen relative">
 
             <div className="absolute -top-0 left-1/2 -translate-x-1/2 -z-20 w-full lg:w-3/4 h-full flex items-center justify-center select-none">
                 <img src={heroBg} alt="" className="h-full md:h-auto w-full object-cover object-center opacity-50 select-none"/>
