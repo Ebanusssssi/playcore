@@ -124,7 +124,7 @@ export const HOW_IT_WORKS_CONTENT = {
 };
 
 export const KEY_FEATURES_CONTENT = {
-  sectionTitle: "Stream Smarter with These Key Features",
+  sectionTitle: "Non Stop Action. Infinite Games.",
   sectionDescription:
     "Everything you need to enhance your streaming experience, all in one place.",
   features: [

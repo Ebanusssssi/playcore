@@ -1,5 +1,14 @@
 import { motion } from "framer-motion"
 import { KEY_FEATURES_CONTENT } from "../constants"
+import gif1 from "../assets/gif_1.gif";
+import gif2 from "../assets/gif_2.gif";
+import gif3 from "../assets/gif_3.gif";
+import gif4 from "../assets/gif_4.gif";
+import gif5 from "../assets/gif_5.gif";
+import gif6 from "../assets/gif_6.gif";
+import gif7 from "../assets/gif_7.gif";
+// import gif8 from "../assets/gif_8.gif";
+// import gif1 from "../assets/gif_1.gif";
 
 const KeyFeatures = () => {
     const containerVariants = {
@@ -23,21 +32,63 @@ const KeyFeatures = () => {
             }
         }
     }
+
+    const gifs = [
+        gif1,gif2,gif3,gif4,gif5,gif6,gif7
+    ]
     return (
         <section className="">
-            <div className="max-w-7xl mx-auto px-4 mt-20">
-                <div className="text-center mb-12 border-t border-neutral-800">
+            <div className="max-w-7xl mx-auto px-4 my-20">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut"}}div className="text-center mb-12 border-t border-neutral-800">
                     <h2 className="text-3xl lg:text-5xl mt-20 tracking-tighter
-                    bg-gradient-to-t from-neutral-50 via-neutral-300 to-neutral-600
+                    bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                     bg-clip-text text-transparent">
                         {KEY_FEATURES_CONTENT.sectionTitle}
                     </h2>
-                    <p className="mt-4">
+                    {/* <p className="mt-4">
                         {KEY_FEATURES_CONTENT.sectionDescription}
-                    </p>
-                </div>
-
+                    </p> */}
+                </motion.div>
+                    
                 <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-wrap justify-between"
+                >
+                    <div className="overflow-hidden relative w-full">
+                        {/* Левый градиент */}
+                        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 
+                                        bg-gradient-to-r from-black to-transparent z-10" />
+
+                        {/* Правый градиент */}
+                        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 
+                                        bg-gradient-to-l from-black to-transparent z-10" />
+
+                        <div className="flex animate-slide">
+                            {[...Array(2)].map((_, i) => (
+                            <div key={i} className="flex">
+                                {gifs.map((src, idx) => (
+                                <motion.div 
+                                    variants={featureVariants}
+                                    className="w-96 h-80 overflow-hidden rounded-xl mx-2">
+                                    <img 
+                                    key={`${i}-${idx}`} 
+                                    src={src} 
+                                    alt={`gif-${idx}`} 
+                                    className="w-full h-full object-cover object-center"
+                                />
+                                </motion.div>
+                                ))}
+                            </div>
+                            ))}
+                        </div>
+                    </div>
+                </motion.div>
+                {/* <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -62,7 +113,7 @@ const KeyFeatures = () => {
                             </p>
                         </motion.div>
                     ))}
-                </motion.div>
+                </motion.div> */}
             </div>
         </section>
     )
