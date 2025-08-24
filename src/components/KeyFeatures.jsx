@@ -42,7 +42,7 @@ const KeyFeatures = () => {
     ]
     return (
         <section className="">
-            <div className=" px-4 my-20">
+            <div className=" px-4 mb-20 mt-0 md:mt-20 md:mb-20">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
