@@ -69,11 +69,11 @@ const KeyFeatures = () => {
 
                         <Swiper
                             modules={[Autoplay]}
-                            slidesPerView={3}
+                            slidesPerView={2}
                             spaceBetween={10}
                             speed={1000} // скорость
                             autoplay={{
-                                delay: 4000,
+                                delay: 1000,
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: true,
                             }}
@@ -81,6 +81,7 @@ const KeyFeatures = () => {
                             breakpoints={{
                                 764: { // мобильные
                                 spaceBetween: 30,
+                                slidesPerView: 3,
                                 },
                             }}
                             watchSlidesProgress={true} // помогает GPU оптимизации
