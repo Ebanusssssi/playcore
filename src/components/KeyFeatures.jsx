@@ -4,13 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode  } from "swiper/modules";
 import "swiper/css"; // не забудь стили
 
-import gif1 from "../assets/gif_1.gif";
-import gif2 from "../assets/gif_2.gif";
-import gif3 from "../assets/gif_3.gif";
-import gif4 from "../assets/gif_4.gif";
-import gif5 from "../assets/gif_5.gif";
-import gif6 from "../assets/gif_6.gif";
-import gif7 from "../assets/gif_7.gif";
+import gif1 from "../assets/gif_1.mp4";
+import gif2 from "../assets/gif_2.mp4";
+import gif3 from "../assets/gif_3.mp4";
+import gif4 from "../assets/gif_4.mp4";
+import gif5 from "../assets/gif_5.mp4";
+import gif6 from "../assets/gif_6.mp4";
+import gif7 from "../assets/gif_7.mp4";
 // import gif8 from "../assets/gif_8.gif";
 // import gif1 from "../assets/gif_1.gif";
 
@@ -102,11 +102,14 @@ const KeyFeatures = () => {
                                 key={idx}
                                 className="rounded-xl overflow-hidden"  
                             >
-                                <img 
-                                src={src} 
-                                alt={`gif-${idx}`} 
-                                className="w-full h-full object-cover object-center"
-                            />
+                                <video 
+                                    src={src}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover object-center" /> 
+                                 
                             </SwiperSlide>
                             ))}
                         </Swiper>
