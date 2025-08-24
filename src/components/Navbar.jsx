@@ -1,6 +1,8 @@
 import { useState } from "react"
 import logo from "../assets/logo.png"
 import { RiCloseFill, RiMenu3Line } from "@remixicon/react";
+import { TbShoppingCartCopy } from "react-icons/tb";
+
 
 
 const Navbar = () => {
@@ -10,34 +12,41 @@ const Navbar = () => {
         setIsOpen(!isOpen)
     }
     return (
-        <nav className="fixed top-4 left-0 right-0 z-50 m-2">
-            <div className="text-neutral-500 bg-black/60 backdrop-blur-md max-w-7xl mx-auto px-4 py-3 flex justify-between items-center rounded-xl border border-neutral-800">
+        <nav className="fixed top-10 left-0 right-0 z-50 m-2">
+            <div className="text-neutral-500 bg-black/50 backdrop-blur-sm max-w-7xl mx-auto px-4 py-3 flex justify-between items-center rounded-xl border border-neutral-800">
                 {/* left: logo */}
-                <img src={logo} alt="logo" width={120} height={24} className="cursor-pointer"/>
+                {/* <img src={logo} alt="logo" width={120} height={24} className="cursor-pointer"/> */}
+                <div className="text-2xl text-white ">
+                    <span className="[text-shadow:2px_2px_0px_#22d3ee]">Play</span>
+                    <span className="[text-shadow:2px_2px_0px_#22d3ee]">Core</span>
+                </div>
 
                 {/* Center: Links (hidden on mobile) */}
                 <div className="hidden md:flex space-x-6 ">
                     <a href="#works" className="hover:text-neutral-200 transition-colors">
-                        How it works
+                        Product
+                    </a>
+                    <a href="#works" className="hover:text-neutral-200 transition-colors">
+                        Contact
                     </a>
                     <a href="#pricing" className="hover:text-neutral-200 transition-colors">
-                        Pricing
+                        About Us
                     </a>
                     <a href="#testimonials" className="hover:text-neutral-200 transition-colors">
-                        Testimonials
+                        FAQ's
                     </a>
                 </div>
 
                 {/* Right: Buttons (hidden on mobile) */}
                 <div className="hidden md:flex space-x-4 items-center">
-                    <a href="#" className="hover:text-neutral-200 transition-all">
-                        Login
+                    <a href="#" className="border border-white/20 text-white py-2 px-4 rounded-lg hover:bg-white/10 transition-colors">
+                        Full Game List
                     </a>
-                    <a href="#" className="border border-neutral-700 text-white py-2 px-4 rounded-lg hover:bg-neutral-700 transition-colors">
-                        Get a Demo
-                    </a>
-                    <a href="#" className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors">
-                        Start Free Trial
+                    <a href="#" className=" text-white py-2 px-4 rounded-lg shiny-border transition-all duration-300 ease-in-out group">
+                        <span className="select-none flex items-center gap-2">
+                            Shop Now
+                            <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+                        </span>
                     </a>
                 </div>
 
@@ -59,21 +68,21 @@ const Navbar = () => {
                         <a href="#works" className="hover:text-neutral-200 transition">
                             Product
                         </a>
+                        <a href="#works" className="hover:text-neutral-200 transition">
+                            Contact
+                        </a>
                         <a href="#pricing" className="hover:text-neutral-200 transition">
-                            Pricing
+                            About Us
                         </a>
                         <a href="#" className="hover:text-neutral-200 transition">
-                            Resources
+                            FAQ's
                         </a>
-                        <a href="#" className="hover:text-white transition">
-                            Login
+                        <a href="#" className="py-2 px-4 border border-white/20 bg-white/0 hover:bg-white/10 text-white rounded-lg  transition-colors duration-300 ease-in-out">
+                            Full Game List
                         </a>
-                        <a href="#" className="border border-neutral-700 text-white py-2 px-4 rounded-lg hover:bg-neutral-700 transition-colors">
-                        Get a Demo
-                    </a>
-                    <a href="#" className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors">
-                        Start Free Trial
-                    </a>
+                        <a href="#" className="shiny-border bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors">
+                            Shop Now
+                        </a>
                     </div>
                 </div>
             )}

@@ -26,13 +26,13 @@ import {
 } from "@remixicon/react";
 
 export const HERO_CONTENT = {
-  badgeText: "🚀 New Feature: Stream Analytics 2.0 Now Live!",
-  mainHeading: "The Ultimate \n Streaming Toolkit+",
+  badgeText: "🔥 Save an Extra 50% Limited Time Option 🔥",
+  mainHeading: "All Your Favorite Games. \n One Epic Console.",
   subHeading:
-    "Optimize your streams, track real-time analytics, and engage your audience effortlessly—all in one place. Perfect for Twitch, YouTube, and Facebook streamers.",
+    "15,000 legendary games & 20+ classic consoles in one powerful mini device. All your favorite 2000s hits—nostalgia in your hands!",
   callToAction: {
-    primary: "Start Free Trial",
-    secondary: "Request a Demo",
+    primary: "Shop Now",
+    secondary: "Full Game List",
   },
   trustedByText: "Trusted by Leading Streaming Brands & Creators",
 };

@@ -1,4 +1,5 @@
 import Footer from "./components/Footer"
+import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import HowItWorks from "./components/HowItWorks"
 import KeyFeatures from "./components/KeyFeatures"
@@ -9,13 +10,14 @@ import Testimonials from "./components/Testimonials"
 const App = () => {
   return (
     <main className="text-sm text-neutral-300 antialiased">
+      <Header />
       <Navbar />
       <HeroSection />
-      <HowItWorks />
-      <KeyFeatures />
-      <PricingPlans />
-      <Testimonials />
-      <Footer />
+      {/* <HowItWorks /> */}
+      {/* <KeyFeatures /> */}
+      {/* <PricingPlans /> */}
+      {/* <Testimonials /> */}
+      {/* <Footer /> */}
     </main>
   )
 }

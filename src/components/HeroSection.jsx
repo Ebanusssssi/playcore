@@ -1,6 +1,10 @@
 import { BRAND_LOGOS, HERO_CONTENT } from "../constants"
-import heroImage from "../assets/hero.jpg"
+// import heroImage from "../assets/hero.jpg"
+import heroBg from "../assets/allConsolesPic.webp"
 import { motion } from "framer-motion"
+import { TbShoppingCartCopy } from "react-icons/tb";
+
+
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,45 +28,59 @@ const HeroSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="pt-28 lg:pt-36">
-            <div className="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
+        className="pt-28 md:pt-28 lg:pt-36 md:h-screen relative">
+
+            <div className="absolute -top-0 left-1/2 -translate-x-1/2 -z-20 w-full lg:w-3/4 h-full flex items-center justify-center select-none">
+                <img src={heroBg} alt="" className="h-full md:h-auto w-full object-cover object-center opacity-50 select-none"/>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 flex flex-col items-center text-center ">
                 <motion.div 
                 variants={fadeInUp}
-                className="mb-8 border-neutral-800 px-3 py-2 rounded-full text-xs">
+                className="md:mt-8 mb-0 px-3 py-2 rounded-full text-white text-nowrap text-[10px] md:text-xs md:text-wrap font-semibold tracking-wide drop-shadow-[0_0_5px_rgba(0,0,0,1)] select-none">
                     {HERO_CONTENT.badgeText}
                 </motion.div>
+                {/* text-2xl md:text-5xl lg:text-8xl */}
                 <motion.h1 
                 variants={fadeInUp}
-                className="text-5xl lg:text-8xl my-4 font-semibold 
-                tracking-tighter bg-gradient-to-b from-neutral-50 via-neutral-300 
-                to-neutral-700 bg-clip-text text-transparent">
-                    {HERO_CONTENT.mainHeading.split("\n").map((text, index) => (
-                        <span key={index}>
-                            {text}
-                            <br />
-                        </span>
-                    ))}
+                className="my-4 md:my-4 text-[6.9vw] md:text-[5vw] leading-[1.05]
+                tracking text-nowrap  drop-shadow-[0_0_10px_rgba(0,0,0,0.7)] text-white select-none">
+                    All Your <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-[length:300%_300%]
+             bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(0,0,0,0.7)] animate-gradient">Favorite Games</span> <br />
+                    One <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-[length:300%_300%]
+             bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(0,0,0,0.7)] animate-gradient">Epic Console</span>
                 </motion.h1>
+                
+
 
                 <motion.p 
                 variants={fadeInUp}
-                className="mt-6 text-neutral-400 max-w-xl">
+                className="text-[10px] leading-normal md:text-xs md:mt-6 text-white max-w-xl font-semibold tracking-wide drop-shadow-[0_0_5px_rgba(0,0,0,1)] select-none">
                     {HERO_CONTENT.subHeading}
                 </motion.p>
                 <motion.div 
                 variants={fadeInUp}
                 className="mt-6 space-x-4">
-                    <a href="#" className="inline-block bg-blue-600 hover:bg-blue-500
-                    text-white py-3 px-5 rounded-lg font-medium transition">
-                        {HERO_CONTENT.callToAction.primary}
+                    <a href="#" 
+                    className="inline-block shiny-border
+                    drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
+                    text-white py-3 px-5 rounded-lg font-black
+                    transition-all duration-300 ease-in-out group"
+                    >
+                        <span className="select-none flex items-center gap-2">
+                            {HERO_CONTENT.callToAction.primary} 
+                            <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+                        </span>
                     </a>
-                    <a href="#" className="inline-block border border-gray-500 hover:border-gray-400
-                    text-white py-3 px-5 rounded-lg font-medium transition">
-                        {HERO_CONTENT.callToAction.secondary}
+                    <a href="#" 
+                    className="inline-block border border-white/20 bg-white/0 hover:bg-white/10
+                    text-white py-3 px-5 rounded-lg font-black transition-all duration-300 ease-in-out"
+                    >
+                        <span className="select-none">{HERO_CONTENT.callToAction.secondary}</span>
                     </a>
                 </motion.div>
 
-                <motion.div 
+                {/* <motion.div 
                 variants={fadeIn}
                 className="py-10">
                     <p className="text-gray-400 text-center mb-8">
@@ -75,16 +93,16 @@ const HeroSection = () => {
                             <img key={index} src={logo.src} alt={logo.alt} className="h-8"/>
                         ))}
                     </motion.div>
-                </motion.div>
+                </motion.div> */}
 
-                <motion.div 
+                {/* <motion.div 
                 variants={fadeIn}
                 className="mt-12">
                     <img 
                         src={heroImage} 
                         alt="Streamer SaaS Interface" 
                         className="w-full h-auto rounded-3xl border border-neutral-800 mb-20"/>
-                </motion.div>
+                </motion.div> */}
             </div>
         </motion.section>
     )

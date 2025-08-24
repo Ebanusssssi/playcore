@@ -1,6 +1,15 @@
+/* Подключаем Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-accent font-black;
+  }
+}
 
 :root {
   background: #000000;
@@ -20,4 +29,52 @@
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+
+
+/* Flying Text At the Top of the Page */
+.flying-text {
+  animation: flyingText 55s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+@keyframes flyingText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+  
+}
+
+
+
+
+.shiny-border {
+  position: relative;
+  z-index: 1;
+}
+
+.shiny-border::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 0;
+  background: linear-gradient(45deg, #ec4899, #22d3ee, #ec4899, #22d3ee, #ec4899);
+  background-size: 300% 300%;
+  animation: shine 8s ease-in-out infinite alternate;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
