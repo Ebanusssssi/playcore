@@ -1,6 +1,9 @@
 
 import { motion } from "framer-motion"
 import { HOW_IT_WORKS_CONTENT } from "../constants"
+import { Link } from "react-router-dom"
+import { TbShoppingCartCopy } from "react-icons/tb";
+
 
 const HowItWorks = () => {
     const stepVariants = {
@@ -43,37 +46,38 @@ const HowItWorks = () => {
                             }
                         }
                     }}
-                    /* #2 CUBIC HARD LAYOUT */
-                    // className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-6">
 
                     // #1 PINTEREST-COLUMNS-LAYOUT
                     className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-4 lg:gap-6">
                     {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
-                        <motion.a
-                            href='#'
-                            target="_blank"
-                            rel="noopener noreferrer" 
+                        <motion.div
                             custom={index}
                             variants={stepVariants}
                             key={index} 
                             className="p-6 rounded-xl shadow-lg 
-                            flex flex-col justify-between break-inside-avoid mb-4 md:mb-4 lg:mb-6">
-                            <div>
-                                {/* <h3 className="text-xl text-center font-semibold mb-4">
-                                    {step.title}
-                                </h3> */}
-                                {/* <p className="text-neutral-400 mb-4">
-                                    {step.description}
-                                </p> */}
-                            </div>
-                            <div className="flex justify-center">
+                            flex flex-col items-center justify-between break-inside-avoid mb-4 md:mb-4 lg:mb-6 select-none relative">
+                            <Link to="/product" className="w-full h-full group">
+                                <div
+                                    className="absolute inset-0 flex items-center justify-center z-20 group-hover:bg-black/30
+                                    drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
+                                    text-white py-3 px-5 rounded-lg font-black transition-all duration-300 ease-in-out"
+                                >
+                                    <span className="opacity-0 -translate-x-5
+                                            group-hover:opacity-100 group-hover:translate-x-0
+                                            transition-all duration-300 ease-in-out select-none flex justify-center items-center gap-2">
+                                        Explore
+                                        <TbShoppingCartCopy 
+                                            className="size-5 " 
+                                        />
+                                    </span>
+                                </div>
                                 <img 
                                     src={step.imageSrc} 
                                     alt={step.imageAlt} 
-                                    className="rounded-lg"
+                                    className="rounded-lg w-full object-cover object-center group-hover:saturate-100 transition-all duration-300 ease-in-out"
                                 />
-                            </div>
-                        </motion.a>
+                            </Link>
+                        </motion.div>
 
                     ))}
                 </motion.div>

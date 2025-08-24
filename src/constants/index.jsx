@@ -6,11 +6,11 @@ import CloudCastLogo from "../assets/cloudcast-logo.png";
 import yellowConsole from "../assets/yellow.webp";
 import midnightConsole from "../assets/midnight.webp";
 import crimsonConsole from "../assets/crimson.webp";
-// import yellowConsole from "../assets/yellow.webp";
 import blueConsole from "../assets/blue.webp";
 import orangeConsole from "../assets/orange.webp";
 import purpleConsole from "../assets/purple.webp";
-// import yellowConsole from "../assets/yellow.webp";
+import whiteConsole from "../assets/white.webp";
+import emeraldConsole from "../assets/emerald.webp";
 import chart from "../assets/chart.png";
 import optimize from "../assets/optimize.jpeg";
 import audienceEngagementImage from "../assets/audience.jpeg";
@@ -54,7 +54,7 @@ export const BRAND_LOGOS = [
 export const HOW_IT_WORKS_CONTENT = {
   sectionTitle: "Pick Yours!",
   sectionDescription:
-    "Gaming is personal. \n Your console, your colours, your style. \n Choose yours from our range of vibrant designs.",
+    "Gaming is personal. \n Your console, your colours, your style. \n Choose your style from our range of vibrant designs.",
   steps: [
     {
       title: "Electric Yellow",
@@ -101,6 +101,22 @@ export const HOW_IT_WORKS_CONTENT = {
       description:
         "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
       imageSrc: purpleConsole,
+      imageAlt: "Workflow Automation",
+      color: "#a38df8",
+    },
+    {
+      title: "Automate Your Workflows",
+      description:
+        "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
+      imageSrc: whiteConsole,
+      imageAlt: "Workflow Automation",
+      color: "#a38df8",
+    },
+    {
+      title: "Automate Your Workflows",
+      description:
+        "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
+      imageSrc: emeraldConsole,
       imageAlt: "Workflow Automation",
       color: "#a38df8",
     },

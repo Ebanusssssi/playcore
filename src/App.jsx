@@ -1,23 +1,26 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import HeroSection from "./components/HeroSection"
-import HowItWorks from "./components/HowItWorks"
-import KeyFeatures from "./components/KeyFeatures"
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import Product from "./pages/Product"
+import Contact from "./pages/Contact"
+import About from "./pages/About"
+import Faq from "./pages/Faq"
+import GameList from "./pages/GameList"
 import Navbar from "./components/Navbar"
-import PricingPlans from "./components/PricingPlans"
-import Testimonials from "./components/Testimonials"
+import Header from "./components/Header"
 
 const App = () => {
   return (
     <main className="text-sm text-neutral-300 antialiased">
       <Header />
       <Navbar />
-      <HeroSection />
-      <HowItWorks />
-      {/* <KeyFeatures /> */}
-      {/* <PricingPlans /> */}
-      {/* <Testimonials /> */}
-      {/* <Footer /> */}
+      <Routes>
+        <Route path="/" element={ <Home /> }/>
+        <Route path="/product" element={ <Product /> }/>
+        <Route path="/contact" element={ <Contact /> }/>
+        <Route path="/about" element={ <About /> }/>
+        <Route path="/faq" element={ <Faq /> }/>
+        <Route path="/gamelist" element={ <GameList /> }/>
+      </Routes>
     </main>
   )
 }
