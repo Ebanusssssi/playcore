@@ -61,20 +61,24 @@ const KeyFeatures = () => {
                 >
                     <div className="overflow-hidden relative w-full">
                         {/* Левый градиент */}
-                        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 
+                        <div className="pointer-events-none absolute left-0 top-0 h-full w-12 md:w-32 
                                         bg-gradient-to-r from-black to-transparent z-10" />
 
                         {/* Правый градиент */}
-                        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 
+                        <div className="pointer-events-none absolute right-0 top-0 h-full w-12 md:w-32 
                                         bg-gradient-to-l from-black to-transparent z-10" />
 
-                        <div className="flex animate-slide">
+                        <motion.div
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+                            className="flex"
+                        >
                             {[...Array(2)].map((_, i) => (
                             <div key={i} className="flex">
                                 {gifs.map((src, idx) => (
                                 <motion.div 
                                     variants={featureVariants}
-                                    className="w-96 h-80 overflow-hidden rounded-xl mx-2">
+                                    className="w-60 h-52 md:w-96 md:h-80 overflow-hidden rounded-xl mx-2">
                                     <img 
                                     key={`${i}-${idx}`} 
                                     src={src} 
@@ -85,7 +89,7 @@ const KeyFeatures = () => {
                                 ))}
                             </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </motion.div>
                 {/* <motion.div
