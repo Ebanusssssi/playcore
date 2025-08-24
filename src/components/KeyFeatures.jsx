@@ -78,9 +78,9 @@ const KeyFeatures = () => {
                             modules={[Autoplay]}
                             slidesPerView="auto"
                             spaceBetween={10}
-                            speed={2000} // скорость
+                            speed={1000} // скорость
                             autoplay={{
-                                delay: 100,
+                                delay: 4000,
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: true,
                             }}
