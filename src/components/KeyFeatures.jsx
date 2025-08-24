@@ -104,7 +104,7 @@ const KeyFeatures = () => {
                             });
                         }}
                         >
-                            {gifs.concat(gifs).map((src, idx) => (
+                            {gifs.map((src, idx) => (
                             <SwiperSlide
                                 key={idx}
                                 className="!w-36 !h-20 md:!w-96 md:!h-72 rounded-xl overflow-hidden"  
