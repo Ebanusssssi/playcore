@@ -4,13 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode  } from "swiper/modules";
 import "swiper/css"; // не забудь стили
 
-import gif1 from "../assets/gif_1.webp";
-import gif2 from "../assets/gif_2.webp";
-import gif3 from "../assets/gif_3.webp";
-import gif4 from "../assets/gif_4.webp";
-import gif5 from "../assets/gif_5.webp";
-import gif6 from "../assets/gif_6.webp";
-import gif7 from "../assets/gif_7.webp";
+import gif1 from "../assets/gif_1.gif";
+import gif2 from "../assets/gif_2.gif";
+import gif3 from "../assets/gif_3.gif";
+import gif4 from "../assets/gif_4.gif";
+import gif5 from "../assets/gif_5.gif";
+import gif6 from "../assets/gif_6.gif";
+import gif7 from "../assets/gif_7.gif";
 // import gif8 from "../assets/gif_8.gif";
 // import gif1 from "../assets/gif_1.gif";
 
