@@ -26,7 +26,7 @@ const HowItWorks = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut"}}
                     className="text-center mb-12">
-                    <h2 className="text-3xl lg:text-5xl tracking-tighter
+                    <h2 className="text-3xl lg:text-5xl
                     bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                     bg-clip-text text-transparent">
                         {HOW_IT_WORKS_CONTENT.sectionTitle}

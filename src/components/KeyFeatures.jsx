@@ -38,18 +38,18 @@ const KeyFeatures = () => {
     }
 
     const gifs = [
-        gif1,gif2,gif3,gif4,gif5,gif6,gif7
+        gif1,gif2,gif3,gif4,gif5,gif6,gif7,gif4
     ]
     return (
         <section className="">
-            <div className="max-w-7xl mx-auto px-4 my-20">
+            <div className=" px-4 my-20">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut"}} 
-                    className="text-center mb-12 border-t border-neutral-800"
+                    className="text-center mb-12"
                 >
-                    <h2 className="text-3xl lg:text-5xl mt-20 tracking-tighter
+                    <h2 className="text-3xl lg:text-5xl
                     bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                     bg-clip-text text-transparent">
                         {KEY_FEATURES_CONTENT.sectionTitle}
@@ -70,7 +70,7 @@ const KeyFeatures = () => {
                         <Swiper
                             modules={[Autoplay]}
                             slidesPerView={2}
-                            spaceBetween={10}
+                            spaceBetween={20}
                             speed={1000} // скорость
                             autoplay={{
                                 delay: 1000,
@@ -80,8 +80,20 @@ const KeyFeatures = () => {
                             loop={true}
                             breakpoints={{
                                 764: { // мобильные
-                                spaceBetween: 30,
+                                spaceBetween: 20,
                                 slidesPerView: 3,
+                                },
+                                1024: { // мобильные
+                                spaceBetween: 20,
+                                slidesPerView: 5,
+                                },
+                                1501: { // мобильные
+                                spaceBetween: 20,
+                                slidesPerView: 6,
+                                },
+                                1701: { // мобильные
+                                spaceBetween: 20,
+                                slidesPerView: 7,
                                 },
                             }}
                             watchSlidesProgress={true} // помогает GPU оптимизации
