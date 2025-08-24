@@ -80,7 +80,7 @@ const KeyFeatures = () => {
                             spaceBetween={10}
                             speed={2000} // скорость
                             autoplay={{
-                                delay: 0,
+                                delay: 100,
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: true,
                             }}
@@ -90,6 +90,7 @@ const KeyFeatures = () => {
                                 spaceBetween: 30,
                                 },
                             }}
+                            watchSlidesProgress={true} // помогает GPU оптимизации
                             onSwiper={(swiper) => {
                             // навешиваем слушатели прямо на контейнер
                             const el = swiper.el;
