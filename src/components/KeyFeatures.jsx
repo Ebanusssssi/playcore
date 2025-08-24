@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { KEY_FEATURES_CONTENT } from "../constants"
-import { useRef, useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode  } from "swiper/modules";
+import "swiper/css"; // не забудь стили
 
 import gif1 from "../assets/gif_1.gif";
 import gif2 from "../assets/gif_2.gif";
@@ -9,12 +11,10 @@ import gif4 from "../assets/gif_4.gif";
 import gif5 from "../assets/gif_5.gif";
 import gif6 from "../assets/gif_6.gif";
 import gif7 from "../assets/gif_7.gif";
-
+// import gif8 from "../assets/gif_8.gif";
+// import gif1 from "../assets/gif_1.gif";
 
 const KeyFeatures = () => {
-
-    const gifs = [ gif1,gif2,gif3,gif4,gif5,gif6,gif7 ]
-
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -37,29 +37,21 @@ const KeyFeatures = () => {
         }
     }
 
-    const trackRef = useRef(null);
-    const [trackWidth, setTrackWidth] = useState(0);
-
-    useEffect(() => {
-        if (trackRef.current) {
-        setTrackWidth(trackRef.current.scrollWidth / 2); // ширина половины (т.е. 1 набора)
-        }
-    }, [gifs]);
-
-
-
+    const gifs = [
+        gif1,gif2,gif3,gif4,gif5,gif6,gif7
+    ]
     return (
         <section className="">
             <div className="max-w-7xl mx-auto px-4 my-20">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut"}}
+                    transition={{ duration: 0.6, ease: "easeOut"}} 
                     className="text-center mb-12 border-t border-neutral-800"
                 >
                     <h2 className="text-3xl lg:text-5xl mt-20 tracking-tighter
                     bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
-                    bg-clip-text text-transparent select-none">
+                    bg-clip-text text-transparent">
                         {KEY_FEATURES_CONTENT.sectionTitle}
                     </h2>
                     {/* <p className="mt-4">
@@ -75,38 +67,58 @@ const KeyFeatures = () => {
                 >
                     <div className="overflow-hidden relative w-full">
                         {/* Левый градиент */}
-                        <div className="pointer-events-none absolute left-0 top-0 h-full w-12 md:w-32 
+                        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 
                                         bg-gradient-to-r from-black to-transparent z-10" />
 
                         {/* Правый градиент */}
-                        <div className="pointer-events-none absolute right-0 top-0 h-full w-12 md:w-32 
+                        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 
                                         bg-gradient-to-l from-black to-transparent z-10" />
 
-                        <motion.div
-                            animate={{ x: [0, -trackWidth] }}
-                            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-                            className="flex"
+                        <Swiper
+                            modules={[Autoplay]}
+                            slidesPerView="auto"
+                            spaceBetween={10}
+                            speed={2000} // скорость
+                            autoplay={{
+                                delay: 0,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true,
+                            }}
+                            loop={true}
+                            breakpoints={{
+                                764: { // мобильные
+                                spaceBetween: 30,
+                                },
+                            }}
+                            onSwiper={(swiper) => {
+                            // навешиваем слушатели прямо на контейнер
+                            const el = swiper.el;
+
+                            el.addEventListener("mouseenter", () => {
+                            swiper.autoplay.stop();
+                            });
+
+                            el.addEventListener("mouseleave", () => {
+                            swiper.autoplay.start();
+                            });
+                        }}
                         >
-                            {[...Array(2)].map((_, i) => (
-                            <div key={i} ref={i === 0 ? trackRef : null} className="flex">
-                                {gifs.map((src, idx) => (
-                                <motion.div
-                                    key={`${i}-${idx}`}
-                                    variants={featureVariants}
-                                    className="w-60 h-52 md:w-96 md:h-80 overflow-hidden rounded-xl mx-2">
-                                    <img 
-                                        key={`${i}-${idx}`} 
-                                        src={src} 
-                                        alt={`gif-${idx}`} 
-                                        className="w-full h-full object-cover object-center"
-                                    />
-                                </motion.div>
-                                ))}
-                            </div>
+                            {gifs.concat(gifs).map((src, idx) => (
+                            <SwiperSlide
+                                key={idx}
+                                className="!w-36 !h-20 md:!w-96 md:!h-72 rounded-xl overflow-hidden"  
+                            >
+                                <img 
+                                src={src} 
+                                alt={`gif-${idx}`} 
+                                className="w-full h-full object-cover object-center"
+                            />
+                            </SwiperSlide>
                             ))}
-                        </motion.div>
+                        </Swiper>
                     </div>
                 </motion.div>
+
                 {/* <motion.div
                     variants={containerVariants}
                     initial="hidden"
