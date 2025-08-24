@@ -16,10 +16,10 @@ const Navbar = () => {
             <div className="text-neutral-500 bg-black/50 backdrop-blur-sm max-w-7xl mx-auto px-4 py-3 flex justify-between items-center rounded-xl border border-neutral-800">
                 {/* left: logo */}
                 {/* <img src={logo} alt="logo" width={120} height={24} className="cursor-pointer"/> */}
-                <div className="text-2xl text-white ">
+                <a href="youtube.com" className="text-xl md:text-2xl text-white select-none">
                     <span className="[text-shadow:2px_2px_0px_#22d3ee]">Play</span>
                     <span className="[text-shadow:2px_2px_0px_#22d3ee]">Core</span>
-                </div>
+                </a>
 
                 {/* Center: Links (hidden on mobile) */}
                 <div className="hidden md:flex space-x-6 ">
@@ -80,8 +80,11 @@ const Navbar = () => {
                         <a href="#" className="py-2 px-4 border border-white/20 bg-white/0 hover:bg-white/10 text-white rounded-lg  transition-colors duration-300 ease-in-out">
                             Full Game List
                         </a>
-                        <a href="#" className="shiny-border bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors">
-                            Shop Now
+                        <a href="#" className="py-2 px-4 shiny-border text-white rounded-lg transition-all duration-300 ease-in-out group">
+                            <span className="select-none flex items-center justify-between gap-2">
+                                Shop Now
+                                <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+                            </span>
                         </a>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const App = () => {
       <Header />
       <Navbar />
       <HeroSection />
-      {/* <HowItWorks /> */}
+      <HowItWorks />
       {/* <KeyFeatures /> */}
       {/* <PricingPlans /> */}
       {/* <Testimonials /> */}
