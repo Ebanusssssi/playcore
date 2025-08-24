@@ -3,7 +3,14 @@ import BroadcastlyLogo from "../assets/broadcastly-logo.png";
 import LiveStreamerLogo from "../assets/livestreamer-logo.png";
 import CloudCastLogo from "../assets/cloudcast-logo.png";
 
-import streamImage from "../assets/streamer.jpeg";
+import yellowConsole from "../assets/yellow.webp";
+import midnightConsole from "../assets/midnight.webp";
+import crimsonConsole from "../assets/crimson.webp";
+// import yellowConsole from "../assets/yellow.webp";
+import blueConsole from "../assets/blue.webp";
+import orangeConsole from "../assets/orange.webp";
+import purpleConsole from "../assets/purple.webp";
+// import yellowConsole from "../assets/yellow.webp";
 import chart from "../assets/chart.png";
 import optimize from "../assets/optimize.jpeg";
 import audienceEngagementImage from "../assets/audience.jpeg";
@@ -45,52 +52,57 @@ export const BRAND_LOGOS = [
 ];
 
 export const HOW_IT_WORKS_CONTENT = {
-  sectionTitle: "How it works!",
+  sectionTitle: "Pick Yours!",
   sectionDescription:
-    "Stream like a pro with our 6-step process. From setup to performance tracking, we've got everything you need to elevate your streaming experience.",
+    "Gaming is personal. \n Your console, your colours, your style. \n Choose yours from our range of vibrant designs.",
   steps: [
     {
-      title: "Set Up Your Streaming Environment",
+      title: "Electric Yellow",
       description:
         "Easily configure your streaming environment with our user-friendly tools. Connect to Twitch, YouTube, and more in minutes.",
-      imageSrc: streamImage,
-      imageAlt: "Streaming Setup",
+      imageSrc: yellowConsole,
+      imageAlt: "Electric Yellow",
+      color: "#f3ac14",
     },
     {
       title: "Engage with Your Audience",
       description:
         "Interact with your audience in real-time through custom alerts, chat overlays, and live notifications.",
-      imageSrc: audienceEngagementImage,
+      imageSrc: midnightConsole,
       imageAlt: "Audience Engagement",
-      users: [user1, user2, user3, user5],
+      color: "#24282e",
     },
     {
       title: "Track and Analyze Performance",
       description:
         "Monitor your stream’s performance in real-time with detailed analytics and viewer engagement insights.",
-      imageSrc: chart,
+      imageSrc: crimsonConsole,
       imageAlt: "Performance Analytics",
+      color: "#e80b1a",
     },
     {
       title: "Optimize Your Stream Settings",
       description:
         "Fine-tune your stream settings for optimal performance, ensuring smooth streams even during high traffic.",
-      imageSrc: optimize,
+      imageSrc: blueConsole,
       imageAlt: "Optimize Settings",
+      color: "#2f82fa",
     },
     {
       title: "Monetize Your Streams",
       description:
         "Unlock revenue streams by adding subscriptions, donations, and sponsorships to your stream.",
-      imageSrc: monetizeImage,
+      imageSrc: orangeConsole,
       imageAlt: "Monetization",
+      color: "#de4905",
     },
     {
       title: "Automate Your Workflows",
       description:
         "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
-      imageSrc: automationImage,
+      imageSrc: purpleConsole,
       imageAlt: "Workflow Automation",
+      color: "#a38df8",
     },
   ],
 };

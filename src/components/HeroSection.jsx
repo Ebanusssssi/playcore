@@ -28,9 +28,9 @@ const HeroSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="pt-28 md:pt-28 lg:pt-36 h-[70vh] md:h-screen relative">
+        className="pt-28 md:pt-28 lg:pt-36 h-[70vh] md:h-[85vh] relative">
 
-            <div className="absolute -top-0 left-1/2 -translate-x-1/2 -z-20 w-full h-[120%] lg:w-3/4 md:h-full flex items-center justify-center select-none">
+            <div className="absolute -top-0 left-1/2 -translate-x-1/2 -z-20 w-full h-[120%] lg:w-3/4 md:h-[120%] flex items-center justify-center select-none">
                 <img src={heroBg} alt="" className="h-full md:h-auto w-full object-cover object-center opacity-50 select-none"/>
             </div>
 
@@ -55,7 +55,7 @@ const HeroSection = () => {
 
                 <motion.p 
                 variants={fadeInUp}
-                className="text-[10px] leading-normal md:text-xs md:mt-6 text-white max-w-xl font-semibold tracking-wide drop-shadow-[0_0_5px_rgba(0,0,0,1)] select-none">
+                className="text-[10px] leading-normal md:text-sm md:mt-6 text-white max-w-xl font-semibold tracking-wide drop-shadow-[0_0_5px_rgba(0,0,0,1)] select-none">
                     {HERO_CONTENT.subHeading}
                 </motion.p>
                 <motion.div 
@@ -65,7 +65,7 @@ const HeroSection = () => {
                     className="inline-block shiny-border
                     drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
                     text-white py-3 px-5 rounded-lg font-black
-                    transition-all duration-300 ease-in-out group"
+                    group"
                     >
                         <span className="select-none flex items-center gap-2">
                             {HERO_CONTENT.callToAction.primary} 

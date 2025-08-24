@@ -24,7 +24,7 @@ const HowItWorks = () => {
                     transition={{ duration: 0.6, ease: "easeOut"}}
                     className="text-center mb-12">
                     <h2 className="text-3xl lg:text-5xl tracking-tighter
-                    bg-gradient-to-t from-neutral-700 via-neutral-300 to-neutral-50
+                    bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                     bg-clip-text text-transparent">
                         {HOW_IT_WORKS_CONTENT.sectionTitle}
                     </h2>
@@ -49,19 +49,22 @@ const HowItWorks = () => {
                     // #1 PINTEREST-COLUMNS-LAYOUT
                     className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-4 lg:gap-6">
                     {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
-                        <motion.div 
+                        <motion.a
+                            href='#'
+                            target="_blank"
+                            rel="noopener noreferrer" 
                             custom={index}
                             variants={stepVariants}
                             key={index} 
-                            className="bg-neutral-900 p-6 rounded-xl shadow-lg 
+                            className="p-6 rounded-xl shadow-lg 
                             flex flex-col justify-between break-inside-avoid mb-4 md:mb-4 lg:mb-6">
                             <div>
-                                <h3 className="text-xl font-semibold mb-4">
+                                {/* <h3 className="text-xl text-center font-semibold mb-4">
                                     {step.title}
-                                </h3>
-                                <p className="text-neutral-400 mb-4">
+                                </h3> */}
+                                {/* <p className="text-neutral-400 mb-4">
                                     {step.description}
-                                </p>
+                                </p> */}
                             </div>
                             <div className="flex justify-center">
                                 <img 
@@ -70,27 +73,7 @@ const HowItWorks = () => {
                                     className="rounded-lg"
                                 />
                             </div>
-
-                            {step.users && (
-                                <div className="flex justify-between mt-4">
-                                    <div className="flex -space-x-2">
-                                        {step.users.map((user, userIndex) => (
-                                            <img 
-                                                key={userIndex} 
-                                                src={user}
-                                                alt={`Person ${userIndex + 1}`} 
-                                                className="h-8 w-8 rounded-full
-                                                border-2 border-black"/>
-                                        ))}
-                                    </div>
-                                    <button className="bg-blue-600
-                                    hover:bg-blue-500 text-white py-2 px-4
-                                    rounded-lg transition">
-                                        Connect
-                                    </button>
-                                </div>
-                            )}
-                        </motion.div>
+                        </motion.a>
 
                     ))}
                 </motion.div>
