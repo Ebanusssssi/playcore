@@ -3,6 +3,7 @@ import { BRAND_LOGOS, HERO_CONTENT } from "../constants"
 import heroBg from "../assets/allConsolesPic.webp"
 import { motion } from "framer-motion"
 import { TbShoppingCartCopy } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 
 
@@ -61,7 +62,7 @@ const HeroSection = () => {
                 <motion.div 
                 variants={fadeInUp}
                 className="mt-6 space-x-4">
-                    <a href="#" 
+                    <Link to="/product" 
                     className="inline-block shiny-border
                     drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
                     text-white py-3 px-5 rounded-lg font-black
@@ -71,7 +72,7 @@ const HeroSection = () => {
                             {HERO_CONTENT.callToAction.primary} 
                             <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
                         </span>
-                    </a>
+                    </Link>
                     <a href="#" 
                     className="inline-block border border-white/20 bg-white/0 hover:bg-white/10
                     text-white py-3 px-5 rounded-lg font-black transition-all duration-300 ease-in-out"

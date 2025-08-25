@@ -11,9 +11,9 @@ const Home = () => {
         <HeroSection />
         <HowItWorks />
         <KeyFeatures />
-        {/* <PricingPlans /> */}
+        <PricingPlans />
         {/* <Testimonials /> */}
-        {/* <Footer /> */}
+        <Footer />
     </div>
   )
 }
