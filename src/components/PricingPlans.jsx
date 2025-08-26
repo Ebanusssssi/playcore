@@ -51,7 +51,7 @@ const PricingPlans = () => {
         <section id="product">
             <div className="max-w-7xl mx-auto px-4 mt-0 mb-0 md:mb-20 md:mt-10 lg:mt-40">
 
-                <div className="w-full min-h-screen flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
+                <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
                     <div className="flex flex-col justify-between bg-cyan-500/0 md:w-1/3 md:sticky md:top-0">
                         <h2 className="mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
