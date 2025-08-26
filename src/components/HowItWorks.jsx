@@ -1,11 +1,20 @@
 
 import { motion } from "framer-motion"
 import { HOW_IT_WORKS_CONTENT } from "../constants"
-import { Link } from "react-router-dom"
 import { TbShoppingCartCopy } from "react-icons/tb";
+import { PageContext } from "../context/PageContext";
+import { useContext } from "react";
 
 
 const HowItWorks = () => {
+
+    const { setSelectedColor } = useContext(PageContext);
+
+     const handleClick = (color) => {
+        setSelectedColor(color);
+        document.getElementById("product")?.scrollIntoView({ behavior: "smooth" });
+    };
+
     const stepVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: (i) => ({
@@ -18,6 +27,7 @@ const HowItWorks = () => {
             }
         })
     }
+
     return(
         <section id="works">
             <div className="max-w-7xl mx-auto px-4">
@@ -51,12 +61,15 @@ const HowItWorks = () => {
                     className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-4 lg:gap-6">
                     {HOW_IT_WORKS_CONTENT.steps.map((step, index) => (
                         <motion.div
+                            onClick={() => handleClick(step.code)}
                             custom={index}
                             variants={stepVariants}
                             key={index} 
                             className="p-6 rounded-xl shadow-lg 
                             flex flex-col items-center justify-between break-inside-avoid mb-4 md:mb-4 lg:mb-6 select-none relative">
-                            <Link to="/product" className="w-full h-full group">
+                            <button 
+                                className="w-full h-full group"
+                            >
                                 <div
                                     className="absolute inset-0 flex items-center justify-center z-20 group-hover:bg-black/30
                                     drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
@@ -76,7 +89,7 @@ const HowItWorks = () => {
                                     alt={step.imageAlt} 
                                     className="rounded-lg w-full object-cover object-center group-hover:saturate-100 transition-all duration-300 ease-in-out"
                                 />
-                            </Link>
+                            </button>
                         </motion.div>
 
                     ))}

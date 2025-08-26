@@ -1,16 +1,39 @@
 import { motion } from "framer-motion"
 import { PLANS_CONTENT } from "../constants"
 import { Link } from "react-router-dom"
-import blueConsole from "../assets/blue.webp"
 import { FaTags } from "react-icons/fa6";
 import { TbShoppingCartCopy } from "react-icons/tb";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { PageContext } from "../context/PageContext";
+import { useContext } from "react";
 
+import yellowConsole from "../assets/yellow.webp"
+import blueConsole from "../assets/blue.webp"
+import whiteConsole from "../assets/white.webp"
+import midnightConsole from "../assets/midnight.webp"
+import orangeConsole from "../assets/orange.webp"
+import emeraldConsole from "../assets/emerald.webp"
+import crimsonConsole from "../assets/crimson.webp"
+import purpleConsole from "../assets/purple.webp"
 
+import { HOW_IT_WORKS_CONTENT } from "../constants"
 
 
 
 const PricingPlans = () => {
+    const { selectedColor, setSelectedColor } = useContext(PageContext);
+    const colors = {
+        Yellow: yellowConsole,
+        Blue: blueConsole,
+        White: whiteConsole,
+        Midnight: midnightConsole,
+        Orange: orangeConsole,
+        Emerald: emeraldConsole,
+        Crimson: crimsonConsole,
+        Purple: purpleConsole,
+    };
+
+
     const childVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: (i) => ({
@@ -23,9 +46,88 @@ const PricingPlans = () => {
             }
         })
     }
+
     return (
-        <section id="pricing">
+        <section id="product">
             <div className="max-w-7xl mx-auto px-4 mt-0 mb-0 md:mb-20 md:mt-10 lg:mt-40">
+
+                <div className="w-full min-h-screen flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
+                    <div className="flex flex-col justify-between bg-cyan-500/0 md:w-1/3 md:sticky md:top-0">
+                        <h2 className="mb-6 md:mb-0 text-3xl lg:text-4xl
+                            bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
+                            bg-clip-text text-transparent md:text-nowrap"
+                        >
+                            All In One <br />
+                            PlayCore Console
+                        </h2>
+                        <div className="flex flex-wrap items-center space-x-4 my-0 mb-6 lg:my-4 md:mb-0">
+                            <span className="text-lg font-semibold text-pink-500">$40.00</span>
+                            <span className="text-lg font-semibold relative">$80.00 <div className="absolute h-[2px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></span>
+                            <div className="flex items-center bg-pink-500/20 px-4 py-2 rounded-full font-semibold animate-pulse border border-pink-500/40">
+                                <FaTags className="text-pink-500 mr-1 lg:mr-2 text-sm -scale-x-100" />
+                                <span className="text-xs lg:text-sm text-pink-500 text-nowrap">SAVE 50%</span>
+                            </div>
+                        </div>
+                        <ul className="text-sm font-semibold text-neutral-300 mb-6 space-y-2">
+                            <li className="">👾 15,000+ Classic Retro Games</li>
+                            <li className="">👾 20+ Legendary Consoles</li>
+                            <li className="">👾 Save & Resume Where You Left Off</li>
+                            <li className="">👾 12 Hour Battery, No Wi-Fi Required</li>
+                        </ul>
+                        <Link 
+                            to="/product" 
+                            className="mt-8 block shiny-border
+                            drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
+                            text-white py-3 px-5 rounded-lg font-black
+                            group text-center"
+                            >
+                            Buy <span className="text-lg mx-0">{selectedColor}</span> Console
+
+                            {/* <span className="select-none flex items-center justify-between text-center gap-2">
+                                <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+                            </span> */}
+                        </Link>
+
+                        <div className="w-full flex items-center gap-2 mt-8 md:mt-6">
+                            {/* <span className="text-xs text-neutral-400">Other Colors:</span> */}
+                            <div className="w-full px-0 flex items-center justify-start gap-x-2 gap-y-2 flex-wrap">
+                                {HOW_IT_WORKS_CONTENT.steps.map((color, index) => (
+                                    <button 
+                                        key={index}
+                                        onClick={() => setSelectedColor(color.code)}
+                                        className={`
+                                            px-4 py-1
+                                            rounded-lg border-2 border-transparent
+                                            hover:border-blue-500 transition-all duration-300 ease-in-out
+                                            flex-shrink-0
+                                            ${selectedColor === color.code ? "border-blue-500" : ""}
+                                        `}
+                                        style={{ backgroundColor: `${color.color}${selectedColor === color.code ? "80" : "33"}`, border: `2px solid ${color.color}` }}
+                                        title={color.imageAlt}
+                                    >
+                                        <span className="">{color.imageAlt}</span>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        <Link to="/product" className="flex items-center mt-8 md:mt-6 text-xs text-neutral-400 underline hover:text-pink-400 transition-colors duration-300 ease-in-out group">
+                            View full details
+                            <FaArrowRightLong className="ml-1 group-hover:translate-x-2 transition-transform duration-300 ease-in-out group"/>
+                        </Link>
+                    </div>
+                    <div className="w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
+                        <img src={colors[selectedColor]} alt="blueConsole" className="w-full h-full object-cover object-center" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    )   
+}
+
+export default PricingPlans
+
+
                 {/* <motion.div 
                     className="text-center mb-12  "
                     initial={{ opacity: 0, y: -20 }}
@@ -100,54 +202,3 @@ const PricingPlans = () => {
                         </motion.div>
                     ))}
                 </motion.div> */}
-
-                <div className="w-full h-screen flex flex-col-reverse md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
-                    <div className="flex flex-col justify-between bg-cyan-500/0 min-w-1/3 h-[50vh] md:sticky md:top-0">
-                        <h2 className="mb-6 md:mb-0 text-3xl lg:text-4xl
-                            bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
-                            bg-clip-text text-transparent md:text-nowrap"
-                        >
-                            All In One <br />
-                            PlayCore Console
-                        </h2>
-                        <div className="flex flex-wrap items-center space-x-4 my-0 mb-6 lg:my-4 md:mb-0">
-                            <span className="text-lg font-semibold text-pink-500">$40.00</span>
-                            <span className="text-lg font-semibold relative">$80.00 <div className="absolute h-[2px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></span>
-                            <div className="flex items-center bg-pink-500/20 px-4 py-2 rounded-full font-semibold animate-pulse border border-pink-500/40">
-                                <FaTags className="text-pink-500 mr-1 lg:mr-2 text-sm -scale-x-100" />
-                                <span className="text-xs lg:text-sm text-pink-500 text-nowrap">SAVE 50%</span>
-                            </div>
-                        </div>
-                        <ul className="text-sm font-semibold text-neutral-300 mb-6 space-y-2">
-                            <li className="">👾 15,000+ Classic Retro Games</li>
-                            <li className="">👾 20+ Legendary Consoles</li>
-                            <li className="">👾 Save & Resume Where You Left Off</li>
-                            <li className="">👾 12 Hour Battery, No Wi-Fi Required</li>
-                        </ul>
-                        <Link 
-                            to="/product" 
-                            className="mt-8 block shiny-border
-                            drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
-                            text-white py-3 px-5 rounded-lg font-black
-                            group"
-                            >
-                            <span className="select-none flex items-center justify-between gap-2">
-                                Shop Now
-                                <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
-                            </span>
-                        </Link>
-                        <Link to="/product" className="flex items-center mt-8 md:mt-2 text-xs text-neutral-400 underline hover:text-pink-400 transition-colors duration-300 ease-in-out group">
-                            View full details
-                            <FaArrowRightLong className="ml-1 group-hover:translate-x-2 transition-transform duration-300 ease-in-out group"/>
-                        </Link>
-                    </div>
-                    <div className="w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
-                        <img src={blueConsole} alt="blueConsole" className="w-full h-full object-cover object-center" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
-
-export default PricingPlans

@@ -31,6 +31,7 @@ import {
   RiYoutubeLine,
   RiCalendarLine,
 } from "@remixicon/react";
+import { code } from "framer-motion/client";
 
 export const HERO_CONTENT = {
   badgeText: "🔥 Save an Extra 50% Limited Time Option 🔥",
@@ -61,64 +62,72 @@ export const HOW_IT_WORKS_CONTENT = {
       description:
         "Easily configure your streaming environment with our user-friendly tools. Connect to Twitch, YouTube, and more in minutes.",
       imageSrc: yellowConsole,
-      imageAlt: "Electric Yellow",
+      imageAlt: "Yellow",
       color: "#f3ac14",
+      code: "Yellow",
     },
     {
       title: "Engage with Your Audience",
       description:
         "Interact with your audience in real-time through custom alerts, chat overlays, and live notifications.",
       imageSrc: midnightConsole,
-      imageAlt: "Audience Engagement",
+      imageAlt: "Midnight",
       color: "#24282e",
+      code: "Midnight",
     },
     {
       title: "Track and Analyze Performance",
       description:
         "Monitor your stream’s performance in real-time with detailed analytics and viewer engagement insights.",
       imageSrc: crimsonConsole,
-      imageAlt: "Performance Analytics",
+      imageAlt: "Crimson",
       color: "#e80b1a",
+      code: "Crimson",
     },
     {
       title: "Optimize Your Stream Settings",
       description:
         "Fine-tune your stream settings for optimal performance, ensuring smooth streams even during high traffic.",
       imageSrc: blueConsole,
-      imageAlt: "Optimize Settings",
+      imageAlt: "Blue",
       color: "#2f82fa",
+      code: "Blue",
     },
     {
       title: "Monetize Your Streams",
       description:
         "Unlock revenue streams by adding subscriptions, donations, and sponsorships to your stream.",
       imageSrc: orangeConsole,
-      imageAlt: "Monetization",
+      imageAlt: "Orange",
       color: "#de4905",
+      code: "Orange",
     },
     {
       title: "Automate Your Workflows",
       description:
         "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
       imageSrc: purpleConsole,
-      imageAlt: "Workflow Automation",
+      imageAlt: "Purple",
       color: "#a38df8",
+      code: "Purple",
     },
     {
       title: "Automate Your Workflows",
       description:
         "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
       imageSrc: whiteConsole,
-      imageAlt: "Workflow Automation",
-      color: "#a38df8",
+      imageAlt: "White",
+      color: "#dee1e7",
+      code: "White",
     },
     {
       title: "Automate Your Workflows",
       description:
         "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
       imageSrc: emeraldConsole,
-      imageAlt: "Workflow Automation",
-      color: "#a38df8",
+      imageAlt: "Emerald",
+      color: "#13ead9",
+      code: "Emerald",
     },
   ],
 };
