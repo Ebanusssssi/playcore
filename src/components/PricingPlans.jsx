@@ -7,31 +7,12 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { PageContext } from "../context/PageContext";
 import { useContext } from "react";
 
-import yellowConsole from "../assets/yellow.webp"
-import blueConsole from "../assets/blue.webp"
-import whiteConsole from "../assets/white.webp"
-import midnightConsole from "../assets/midnight.webp"
-import orangeConsole from "../assets/orange.webp"
-import emeraldConsole from "../assets/emerald.webp"
-import crimsonConsole from "../assets/crimson.webp"
-import purpleConsole from "../assets/purple.webp"
-
 import { HOW_IT_WORKS_CONTENT } from "../constants"
 
 
 
 const PricingPlans = () => {
     const { selectedColor, setSelectedColor } = useContext(PageContext);
-    const colors = {
-        Yellow: yellowConsole,
-        Blue: blueConsole,
-        White: whiteConsole,
-        Midnight: midnightConsole,
-        Orange: orangeConsole,
-        Emerald: emeraldConsole,
-        Crimson: crimsonConsole,
-        Purple: purpleConsole,
-    };
 
 
     const childVariants = {
@@ -52,7 +33,7 @@ const PricingPlans = () => {
             <div className="max-w-7xl mx-auto px-4 mt-0 mb-0 md:mb-20 md:mt-10 lg:mt-40">
 
                 <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
-                    <div className="flex flex-col justify-between bg-cyan-500/0 md:w-1/3 md:sticky md:top-0">
+                    <div style={{ backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color+"33", border: "2px solid" + HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color+"80" }} className="flex flex-col justify-between md:w-1/3 md:sticky md:top-0 py-4 px-4 rounded-xl ">
                         <h2 className="mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                             bg-clip-text text-transparent md:text-nowrap"
@@ -117,7 +98,7 @@ const PricingPlans = () => {
                         </Link>
                     </div>
                     <div className="w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
-                        <img src={colors[selectedColor]} alt="blueConsole" className="w-full h-full object-cover object-center" />
+                        <img src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} alt="blueConsole" className="w-full h-full object-cover object-center" />
                     </div>
                 </div>
             </div>

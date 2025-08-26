@@ -59,8 +59,6 @@ export const HOW_IT_WORKS_CONTENT = {
   steps: [
     {
       title: "Electric Yellow",
-      description:
-        "Easily configure your streaming environment with our user-friendly tools. Connect to Twitch, YouTube, and more in minutes.",
       imageSrc: yellowConsole,
       imageAlt: "Yellow",
       color: "#f3ac14",
@@ -68,8 +66,6 @@ export const HOW_IT_WORKS_CONTENT = {
     },
     {
       title: "Engage with Your Audience",
-      description:
-        "Interact with your audience in real-time through custom alerts, chat overlays, and live notifications.",
       imageSrc: midnightConsole,
       imageAlt: "Midnight",
       color: "#24282e",
@@ -77,8 +73,6 @@ export const HOW_IT_WORKS_CONTENT = {
     },
     {
       title: "Track and Analyze Performance",
-      description:
-        "Monitor your stream’s performance in real-time with detailed analytics and viewer engagement insights.",
       imageSrc: crimsonConsole,
       imageAlt: "Crimson",
       color: "#e80b1a",
@@ -86,8 +80,6 @@ export const HOW_IT_WORKS_CONTENT = {
     },
     {
       title: "Optimize Your Stream Settings",
-      description:
-        "Fine-tune your stream settings for optimal performance, ensuring smooth streams even during high traffic.",
       imageSrc: blueConsole,
       imageAlt: "Blue",
       color: "#2f82fa",
@@ -95,8 +87,6 @@ export const HOW_IT_WORKS_CONTENT = {
     },
     {
       title: "Monetize Your Streams",
-      description:
-        "Unlock revenue streams by adding subscriptions, donations, and sponsorships to your stream.",
       imageSrc: orangeConsole,
       imageAlt: "Orange",
       color: "#de4905",
@@ -104,8 +94,6 @@ export const HOW_IT_WORKS_CONTENT = {
     },
     {
       title: "Automate Your Workflows",
-      description:
-        "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
       imageSrc: purpleConsole,
       imageAlt: "Purple",
       color: "#a38df8",
@@ -113,8 +101,6 @@ export const HOW_IT_WORKS_CONTENT = {
     },
     {
       title: "Automate Your Workflows",
-      description:
-        "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
       imageSrc: whiteConsole,
       imageAlt: "White",
       color: "#dee1e7",
@@ -122,8 +108,6 @@ export const HOW_IT_WORKS_CONTENT = {
     },
     {
       title: "Automate Your Workflows",
-      description:
-        "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
       imageSrc: emeraldConsole,
       imageAlt: "Emerald",
       color: "#13ead9",
