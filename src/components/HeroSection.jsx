@@ -62,7 +62,7 @@ const HeroSection = () => {
                 <motion.div 
                 variants={fadeInUp}
                 className="mt-6 space-x-4">
-                    <Link to="/product" 
+                    <a href="#product"
                     className="inline-block shiny-border
                     drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
                     text-white py-3 px-5 rounded-lg font-black
@@ -72,7 +72,7 @@ const HeroSection = () => {
                             {HERO_CONTENT.callToAction.primary} 
                             <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
                         </span>
-                    </Link>
+                    </a>
                     <a href="#" 
                     className="inline-block border border-white/20 bg-white/0 hover:bg-white/10
                     text-white py-3 px-5 rounded-lg font-black transition-all duration-300 ease-in-out"

@@ -13,6 +13,7 @@
 
 :root {
   background: #000000;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -56,6 +57,7 @@
 .shiny-border {
   position: relative;
   z-index: 1;
+  filter: saturate(1.5);
 }
 
 .shiny-border::before {
