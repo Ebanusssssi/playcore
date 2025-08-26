@@ -33,7 +33,10 @@ const PricingPlans = () => {
             <div className="max-w-7xl mx-auto px-4 mt-0 mb-0 md:mb-20 md:mt-10 lg:mt-40">
 
                 <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
-                    <div style={{ backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color+"33", border: "2px solid" + HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color+"80" }} className="flex flex-col justify-between md:w-1/3 md:sticky md:top-0 py-4 px-4 rounded-xl ">
+                    <div 
+                        style={{ backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color+"33", border: "2px solid" + HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color+"80" }} 
+                        className="flex flex-col justify-between md:w-1/3 md:sticky md:top-0 py-4 px-4 rounded-xl transition-all duration-300 ease-in-out"
+                    >
                         <h2 className="mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                             bg-clip-text text-transparent md:text-nowrap"
@@ -46,7 +49,7 @@ const PricingPlans = () => {
                             <span className="text-lg font-semibold relative">$80.00 <div className="absolute h-[2px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></span>
                             <div className="flex items-center bg-pink-500/20 px-4 py-2 rounded-full font-semibold animate-pulse border border-pink-500/40">
                                 <FaTags className="text-pink-500 mr-1 lg:mr-2 text-sm -scale-x-100" />
-                                <span className="text-xs lg:text-sm text-pink-500 text-nowrap">SAVE 50%</span>
+                                <span className="text-xs lg:text-sm text-pink-500 text-nowrap back">SAVE 50%</span>
                             </div>
                         </div>
                         <ul className="text-sm font-semibold text-neutral-300 mb-6 space-y-2">
@@ -98,7 +101,10 @@ const PricingPlans = () => {
                         </Link>
                     </div>
                     <div className="w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
-                        <img src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} alt="blueConsole" className="w-full h-full object-cover object-center" />
+                        <img 
+                            src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} 
+                            alt="blueConsole" 
+                            className="w-full h-full object-cover object-center" />
                     </div>
                 </div>
             </div>
