@@ -92,10 +92,10 @@ const PricingPlans = () => {
                             </div>
                         </button>
 
-                        <Link to="/product" className="flex items-center mt-8 md:mt-6 text-xs text-neutral-400 underline hover:text-pink-400 transition-colors duration-300 ease-in-out group">
+                        <a href="#fullDetails" className="flex items-center mt-8 md:mt-6 text-xs text-neutral-400 underline hover:text-pink-400 transition-colors duration-300 ease-in-out group">
                             View full details
                             <FaArrowRightLong className="ml-1 group-hover:translate-x-2 transition-transform duration-300 ease-in-out group"/>
-                        </Link>
+                        </a>
                     </div>
                     <div className="w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
                         <img 
