@@ -113,7 +113,7 @@ const FullDetails = () => {
                             key={index} 
                             className="shiny-border flex flex-col items-center text-center p-4 mb-4 lg:mb-6 rounded-lg overflow-hidden relative"
                         >   
-                            <div className="absolute w-[96%] h-[85%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 bg-black rounded-lg"></div>
+                            <div className="absolute w-[99%] h-[90%] md:w-[99%] md:h-[90%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 bg-black rounded-lg"></div>
 
                             <div className="w-full flex items-center justify-center gap-2 drop-shadow-md mb-2">
                                 {feature.icon}
