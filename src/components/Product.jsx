@@ -33,7 +33,7 @@ const PricingPlans = () => {
             <div className="max-w-7xl mx-auto px-4 mt-10 mb-0 md:mb-20 lg:mt-20">
 
                 <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between md:gap-10 md:relative select-none">
-                    <div className="flex flex-col min-w-[40%] md:w-1/3 md:sticky md:top-0 py-4 px-4 rounded-xl transition-all duration-300 ease-in-out">
+                    <div className="flex flex-col min-w-[40%] md:w-1/3 md:sticky md:top-0 pb-4 px-4 rounded-xl transition-all duration-300 ease-in-out">
                         <h2 className="hidden md:block mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                             bg-clip-text text-transparent"
@@ -41,7 +41,7 @@ const PricingPlans = () => {
                             All In One <br />
                             PlayCore Console
                         </h2>
-                        <div className="flex flex-wrap items-center space-x-4 my-0 mb-6 lg:my-4 md:mb-0">
+                        <div className="flex flex-wrap items-center space-x-4 my-0 my-6 lg:my-4 md:mb-0">
                             <span className="text-lg font-semibold text-pink-500">$40.00</span>
                             <span className="text-lg font-semibold relative">$80.00 <div className="absolute h-[2px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></span>
                             <div className="flex items-center bg-pink-500/20 px-4 py-2 rounded-full font-semibold animate-pulse border border-pink-500/40">
