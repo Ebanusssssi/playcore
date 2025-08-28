@@ -3,7 +3,6 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css"; // не забудь стили
 import { motion } from "framer-motion"
 
-
 import console from "../assets/consoleInfo.png";
 
 import pic1 from "../assets/pic_1.png";

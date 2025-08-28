@@ -1,11 +1,17 @@
-import { motion } from "framer-motion"
-import { PLANS_CONTENT } from "../constants"
-import { Link } from "react-router-dom"
+// import { motion } from "framer-motion"
 import { FaTags } from "react-icons/fa6";
 import { TbShoppingCartCopy } from "react-icons/tb";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { PageContext } from "../context/PageContext";
 import { useContext } from "react";
+import { useState } from "react";
+import { TbTruckDelivery } from "react-icons/tb";
+import { TbSettings } from "react-icons/tb";
+import { CgGames } from "react-icons/cg";
+
+
+
+
 
 import { HOW_IT_WORKS_CONTENT } from "../constants"
 
@@ -13,6 +19,65 @@ import { HOW_IT_WORKS_CONTENT } from "../constants"
 
 const PricingPlans = () => {
     const { selectedColor, setSelectedColor } = useContext(PageContext);
+
+    const [openSections, setOpenSections] = useState({});
+
+    const toggleSection = (index) => {
+        setOpenSections((prev) => ({
+        ...prev,
+        [index]: !prev[index],
+        }));
+    };
+
+    const sections = [
+        { 
+            title: "Shipping Information",
+            icon: <TbTruckDelivery className="w-6 h-6" />,
+            content: (
+                <p className="pb-4">
+                    Our standard delivery is 3-8 business days within the United Kingdom, with tracking provided. 
+                    Free standard shipping is included, and express shipping is available for $9.99
+                </p>
+            ) 
+        },
+        { 
+            title: "Console Specs",
+            icon: <TbSettings className="w-6 h-6" />,
+            content: (
+                <ul className="pl-2 pb-4 flex flex-col gap-1">
+                    <li>CPU:  <span className="text-xs font-normal text-neutral-400">RK3326 64-bit Quad-Core 1.5GHz</span></li>
+                    <li>RAM:  <span className="text-xs font-normal text-neutral-400">1GB DDR3L</span></li>
+                    <li>Display:  <span className="text-xs font-normal text-neutral-400">3.5" IPS HD</span></li>
+                    <li>GPU:  <span className="text-xs font-normal text-neutral-400">Mali-G31 MP2</span></li>
+                    <li>Storage:  <span className="text-xs font-normal text-neutral-400">64GB Internal Memory + Expandable via MicroSD (up to 256GB)</span></li>
+                    <li>Battery:  <span className="text-xs font-normal text-neutral-400">3200mAh ~ 12 Hours of Gameplay (per charge)</span></li>
+                </ul>
+            )
+        },
+        { 
+            title: "Included Games", 
+            icon: <CgGames className="w-6 h-6" />,
+            content: (
+                <div className="pb-4">
+                    <p className="">The PlayCore Console comes packed with over 15,000 classic games, spanning decades and genres. 
+                        Relive gaming history with legendary titles from a variety consoles, including:
+                    </p>
+                    <ul className="pl-2 py-2 flex flex-col gap-1">
+                        <li className="">🕹️ Capcom Play Systems <span className="text-xs font-normal text-neutral-400">(1, 2, 3)</span></li>
+                        <li className="">🕹️ M.A.M.E 2003</li>
+                        <li className="">🕹️ PC Engine</li>
+                        <li className="">🕹️ Famicon Disk System</li>
+                        <li className="">🕹️ Nintendo Systems <span className="text-xs font-normal text-neutral-400">- NES, SNES, N64, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS</span></li>
+                        <li className="">🕹️ Sega Systems <span className="text-xs font-normal text-neutral-400">- Mega Drive, Dreamcast, Game Gear</span></li>
+                        <li className="">🕹️ Neo Geo</li>
+                        <li className="">🕹️ Sony <span className="text-xs font-normal text-neutral-400">- PlayStation and PSP</span></li>
+                    </ul>
+                    <p> And many more! Explore a vast library of retro games and discover hidden gems across multiple platforms.
+                    </p>
+                </div>
+            )
+        },
+    ];
 
 
     const childVariants = {
@@ -33,7 +98,7 @@ const PricingPlans = () => {
             <div className="max-w-7xl mx-auto px-4 mt-10 mb-0 md:mb-20 lg:mt-20">
 
                 <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between md:gap-10 md:relative select-none">
-                    <div className="flex flex-col min-w-[40%] md:w-1/3 md:sticky md:top-0 pb-4 px-4 rounded-xl transition-all duration-300 ease-in-out">
+                    <div className="flex flex-col min-w-[40%] md:w-1/3 pb-4 px-4 rounded-xl transition-all duration-300 ease-in-out">
                         <h2 className="hidden md:block mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                             bg-clip-text text-transparent"
@@ -92,12 +157,35 @@ const PricingPlans = () => {
                             </div>
                         </button>
 
+
+                        <div className="w-full mt-3">
+                            {sections.map((section, index) => (
+                                <div key={index} className="">
+                                <button
+                                    className="w-full flex justify-between items-center py-3 font-semibold group"
+                                    onClick={() => toggleSection(index)}
+                                >
+                                    <span 
+                                        className="flex items-center gap-2 group-hover:text-white transition-colors duration-300 ease-in-out"
+                                    >
+                                        {section.icon} {section.title}
+                                    </span>
+                                    <span>{openSections[index] ? "−" : "+"}</span>
+                                </button>
+                                {openSections[index] && (
+                                    <div className="p-3 text-gray-300 bg-neutral-900 rounded-lg">{section.content}</div>
+                                )}
+                                </div>
+                            ))}
+                        </div>
+
+
                         <a href="#fullDetails" className="flex items-center mt-8 md:mt-6 text-xs text-neutral-400 underline hover:text-pink-400 transition-colors duration-300 ease-in-out group">
                             View full details
                             <FaArrowRightLong className="ml-1 group-hover:translate-x-2 transition-transform duration-300 ease-in-out group"/>
                         </a>
                     </div>
-                    <div className="w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
+                    <div className="md:sticky md:top-0 w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
                         <h2 className="md:hidden block text-center mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                             bg-clip-text text-transparent"
