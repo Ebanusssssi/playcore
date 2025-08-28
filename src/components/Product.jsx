@@ -32,9 +32,9 @@ const PricingPlans = () => {
         <section id="product">
             <div className="max-w-7xl mx-auto px-4 mt-10 mb-0 md:mb-20 lg:mt-20">
 
-                <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
+                <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between md:gap-10 md:relative select-none">
                     <div className="flex flex-col min-w-[40%] md:w-1/3 md:sticky md:top-0 py-4 px-4 rounded-xl transition-all duration-300 ease-in-out">
-                        <h2 className="mb-6 md:mb-0 text-3xl lg:text-4xl
+                        <h2 className="hidden md:block mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                             bg-clip-text text-transparent"
                         >
@@ -98,6 +98,13 @@ const PricingPlans = () => {
                         </a>
                     </div>
                     <div className="w-full h-full md:w-2/3 lg:h-auto overflow-hidden">
+                        <h2 className="md:hidden block text-center mb-6 md:mb-0 text-3xl lg:text-4xl
+                            bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
+                            bg-clip-text text-transparent"
+                        >
+                            All In One <br />
+                            PlayCore Console
+                        </h2>
                         <img 
                             src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} 
                             alt="blueConsole" 
