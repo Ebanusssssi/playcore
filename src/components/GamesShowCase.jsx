@@ -96,17 +96,17 @@ const GamesShowCase = () => {
                             }}
                             watchSlidesProgress={true} // помогает GPU оптимизации
                             onSwiper={(swiper) => {
-                            // навешиваем слушатели прямо на контейнер
-                            const el = swiper.el;
+                                // навешиваем слушатели прямо на контейнер
+                                const el = swiper.el;
 
-                            el.addEventListener("mouseenter", () => {
-                            swiper.autoplay.stop();
-                            });
+                                el.addEventListener("mouseenter", () => {
+                                swiper.autoplay.stop();
+                                });
 
-                            el.addEventListener("mouseleave", () => {
-                            swiper.autoplay.start();
-                            });
-                        }}
+                                el.addEventListener("mouseleave", () => {
+                                swiper.autoplay.start();
+                                });
+                            }}
                         >
                             {gifs.map((src, idx) => (
                             <SwiperSlide

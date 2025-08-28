@@ -11,17 +11,29 @@ import orangeConsole from "../assets/orange.webp";
 import purpleConsole from "../assets/purple.webp";
 import whiteConsole from "../assets/white.webp";
 import emeraldConsole from "../assets/emerald.webp";
-import chart from "../assets/chart.png";
-import optimize from "../assets/optimize.jpeg";
-import audienceEngagementImage from "../assets/audience.jpeg";
-import monetizeImage from "../assets/monetize.jpeg";
-import automationImage from "../assets/automation.jpeg";
-import user1 from "../assets/user1.jpeg";
-import user2 from "../assets/user2.jpeg";
-import user3 from "../assets/user3.jpeg";
-import user4 from "../assets/user4.jpeg";
-import user5 from "../assets/user5.jpeg";
-import user6 from "../assets/user6.jpeg";
+
+
+import review_1 from "../assets/review_1.jpeg";
+import review_2 from "../assets/review_2.jpeg";
+import review_3 from "../assets/review_3.jpeg";
+import review_4 from "../assets/review_4.jpeg";
+import review_5 from "../assets/review_5.jpeg";
+import review_6 from "../assets/review_6.jpeg";
+import review_7 from "../assets/review_7.jpeg";
+import review_8 from "../assets/review_8.jpeg";
+import review_9 from "../assets/review_9.jpeg";
+import review_10 from "../assets/review_10.jpeg";
+
+import avatar_1 from "../assets/avatar_1.jpeg";
+import avatar_2 from "../assets/avatar_2.jpeg";
+import avatar_3 from "../assets/avatar_3.webp";
+import avatar_4 from "../assets/avatar_4.jpg";
+import avatar_5 from "../assets/avatar_5.webp";
+import avatar_6 from "../assets/avatar_6.jpg";
+import avatar_7 from "../assets/avatar_7.jpg";
+import avatar_8 from "../assets/avatar_8.jpg";
+import avatar_9 from "../assets/avatar_9.jpeg";
+import avatar_10 from "../assets/avatar_10.jpg";
 
 import { FaMicrochip } from "react-icons/fa6";
 import { FaMemory } from "react-icons/fa";
@@ -29,6 +41,8 @@ import { BsGpuCard } from "react-icons/bs";
 import { BiSolidMemoryCard } from "react-icons/bi";
 import { FaBatteryThreeQuarters } from "react-icons/fa6";
 import { MdSmartDisplay } from "react-icons/md";
+import { FaStar } from "react-icons/fa6";
+
 
 
 import { code } from "framer-motion/client";
@@ -216,51 +230,89 @@ export const PLANS_CONTENT = {
 };
 
 export const TESTIMONIALS_CONTENT = {
-  sectionTitle: "What Our Streamers Say",
+  sectionTitle: "Reviews ",
   sectionDescription:
     "Hear from some of the top streamers who use Streamerzz to engage with their audience and grow their channels.",
   reviews: [
     {
-      name: "Alice Johnson",
-      title: "Content Creator",
+      name: "Lukas Schneider",
+      title: <FaStar className="w-3 h-3"/>,
       review:
-        "Streamerzz has revolutionized the way we manage our content subscriptions. The intuitive dashboard and real-time analytics have made it easier to track our progress and optimize our offerings. Highly recommended!",
-      image: user1,
+        "Was meant to wrap it up for my nephew.... Ended up \"testing\" it all night. 10/10",
+      image: review_1,
+      avatar: avatar_1,
     },
     {
-      name: "Bob Smith",
-      title: "Marketing Specialist",
+      name: "Oliver Johansson",
+      title: <FaStar className="w-3 h-3"/>,
       review:
-        "The team at Streamerzz has been fantastic! Their support is responsive and knowledgeable. The platform itself is versatile and has helped us streamline our subscription management, saving us time and increasing efficiency.",
-      image: user2,
+        "Really cool little emulator box. I expected it to be a lot worse than it is. Great choice of emulator software and interface for newbies to emulation. Defo worth the price, I've had to give it to my kids because they won't stop pastering for it. Will order another one I guess :)",
+      image: review_2,
+      avatar: avatar_2,
     },
     {
-      name: "Carla Mendes",
-      title: "Product Manager",
+      name: "Mateo Rossi",
+      title: <FaStar className="w-3 h-3"/>,
       review:
-        "Streamerzz's automated billing and comprehensive analytics have been game-changers for our product team. We can now easily track user engagement and make data-driven decisions to enhance our service offerings.",
-      image: user3,
+        "Honestly couldn't be anymore impressed by this console! Was slightly sceptical before placing the order but so glad I did! I've spent every day playing it re-living my childhood with the older games. Quality is superb, graphics are amazing - recommeded it to a mate of mine and as purchased another one for my boy! Great value for money!",
+      image: review_3,
+      avatar: avatar_3,
     },
     {
-      name: "David Lee",
-      title: "Customer Success Manager",
+      name: "Elena Dimitrova",
+      title: <FaStar className="w-3 h-3"/>,
       review:
-        "Using Streamerzz, we’ve been able to increase our customer retention rates. The platform's user-friendly interface and powerful features have provided our customers with a seamless experience, leading to higher satisfaction.",
-      image: user4,
+        "I ordered two console, one white, one blue. For me and my little brother. I like those transparent designs so much that I had to swap mine with my little brothers one. Love these.",
+      image: review_4,
+      avatar: avatar_4,
     },
     {
-      name: "Ella Fernandez",
-      title: "UX Designer",
+      name: "Andrei Petrescu",
+      title: <FaStar className="w-3 h-3"/>,
       review:
-        "Streamerzz's flexibility and ease of use have made it a key tool in our design process. We can quickly adjust our subscription plans and monitor the impact on user engagement, allowing for a more responsive approach.",
-      image: user5,
+        "I'm loving the device. There are plenty of games to choose from. Great idea to bring those games back. Thank You!",
+      image: review_5,
+      avatar: avatar_5,
     },
     {
-      name: "Frank Wilson",
-      title: "Data Analyst",
+      name: "Tomás Duarte",
+      title: <FaStar className="w-3 h-3"/>,
       review:
-        "Streamerzz provides us with detailed insights into our subscription metrics. The advanced reporting tools have enabled us to identify trends and make informed decisions to optimize our growth strategy.",
-      image: user6,
+        "Came today, we leave for a vacation soon so we ordered 2 for our kids for a bit of fun on the plane and they arrived very quickly. First impressions are WOW! Loads of retro games that I loved back in days. Little nostalgia.",
+      image: review_6,
+      avatar: avatar_6,
+    },
+    {
+      name: "Nicolas Lefèvre",
+      title: <FaStar className="w-3 h-3"/>,
+      review:
+        "Amazing little emulator with 20,000+ games. The screen is sharper than most of my kitchen knifes and bigger than a gameboy or DS. You even got the option to add more Roms to it. And the playtime for your next charge is alot. So so happy with the console and would recommend it definitely",
+      image: review_7,
+      avatar: avatar_7,
+    },
+    {
+      name: "Sofia Novak",
+      title: <FaStar className="w-3 h-3"/>,
+      review:
+        "Bought this for my boyfriend and myself to keep us occupied whilst flying, there's so many games to choose from and the battery life lasts for ages, highly recommend purchasing as it value for money.",
+      image: review_8,
+      avatar: avatar_8,
+    },
+    {
+      name: "William Carter",
+      title: <FaStar className="w-3 h-3"/>,
+      review:
+        "I was very sceptical the first but once it arrived it proved me wrong it's great so many games I honestly don't I'll ever get through all of them. I've let all my friends try it and they all going to get one too. Thanks",
+      image: review_9,
+      avatar: avatar_10,
+    },
+    {
+      name: "Jakub Kowalski",
+      title: <FaStar className="w-3 h-3"/>,
+      review:
+        "It's got all the old school Sonic games and  MARIO!?!?!? Mate I'm set for the weekend. Bit of a pain sharing it with the kids though, might grab another one for personal use ONLY",
+      image: review_10,
+      avatar: avatar_9,
     },
   ],
 };
