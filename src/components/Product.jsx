@@ -30,10 +30,10 @@ const PricingPlans = () => {
 
     return (
         <section id="product">
-            <div className="max-w-7xl mx-auto px-4 mt-10 mb-0 md:mb-20 md:mt-30 lg:mt-40">
+            <div className="max-w-7xl mx-auto px-4 mt-10 mb-0 md:mb-20 lg:mt-20">
 
                 <div className="w-full h-max flex flex-col-reverse justify-start md:flex-row md:items-start md:justify-between gap-10 md:relative select-none">
-                    <div className="flex flex-col md:w-1/3 md:sticky md:top-0 py-4 px-4 rounded-xl transition-all duration-300 ease-in-out">
+                    <div className="flex flex-col min-w-[40%] md:w-1/3 md:sticky md:top-0 py-4 px-4 rounded-xl transition-all duration-300 ease-in-out">
                         <h2 className="mb-6 md:mb-0 text-3xl lg:text-4xl
                             bg-gradient-to-t from-cyan-400 via-neutral-300 to-white
                             bg-clip-text text-transparent"
@@ -55,20 +55,6 @@ const PricingPlans = () => {
                             <li className="">👾 Save & Resume Where You Left Off</li>
                             <li className="">👾 12 Hour Battery, No Wi-Fi Required</li>
                         </ul>
-                        <button
-                            className="mt-8 block shiny-border
-                            drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
-                            text-white py-3 px-5 rounded-lg font-black
-                            group text-center relative overflow-hidden"
-                            > 
-                            <p className="translate-x-0 group-hover:translate-x-96 transition-all duration-300 ease-in-out">Buy<span className="text-lg mx-2">{selectedColor}</span>Console</p>
-                            <div className="flex items-center gap-2 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-96 group-hover:-translate-x-1/2 transition-all duration-300 ease-in-out">
-                                <TbShoppingCartCopy className="size-6" />
-                                <span className="text-lg text-nowrap">{selectedColor}</span> 
-                            </div>
-                            {/* <TbShoppingCartCopy className="absolute top-1/2 -translate-y-1/2 right-5 -translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" /> */}
-                            {/* <TbShoppingCartCopy className="absolute top-1/2 -translate-y-1/2 left-5 -translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" /> */}
-                        </button>
 
                         <div className="w-full flex items-center gap-2 mt-8">
                             {/* <span className="text-xs text-neutral-400">Other Colors:</span> */}
@@ -92,6 +78,19 @@ const PricingPlans = () => {
                                 ))}
                             </div>
                         </div>
+
+                        <button
+                            className="mt-8 block shiny-border
+                            drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
+                            text-white py-3 px-5 rounded-lg font-black
+                            group text-center relative overflow-hidden"
+                            > 
+                            <p className="translate-x-0 group-hover:translate-x-full transition-all duration-300 ease-in-out">Buy<span className="text-lg mx-2">{selectedColor}</span>Console</p>
+                            <div className="flex items-center gap-2 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-[45rem] group-hover:-translate-x-1/2 transition-all duration-300 ease-in-out">
+                                <TbShoppingCartCopy className="size-6" />
+                                <span className="text-lg text-nowrap">{selectedColor}</span> 
+                            </div>
+                        </button>
 
                         <Link to="/product" className="flex items-center mt-8 md:mt-6 text-xs text-neutral-400 underline hover:text-pink-400 transition-colors duration-300 ease-in-out group">
                             View full details

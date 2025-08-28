@@ -1,17 +1,19 @@
 import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
-import HowItWorks from "../components/HowItWorks"
-import KeyFeatures from "../components/KeyFeatures"
-import PricingPlans from "../components/PricingPlans"
+import PickYours from "../components/PickYours"
+import GamesShowCase from "../components/GamesShowCase"
+import Product from "../components/Product"
 import Testimonials from "../components/Testimonials"
+import FullDetails from "../components/FullDetails"
 
 const Home = () => {
   return (
     <div>
         <HeroSection />
-        <HowItWorks />
-        <KeyFeatures />
-        <PricingPlans />
+        <PickYours />
+        <GamesShowCase />
+        <Product />
+        <FullDetails />
         {/* <Testimonials /> */}
         <Footer />
     </div>

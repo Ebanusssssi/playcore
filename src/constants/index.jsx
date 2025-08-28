@@ -23,14 +23,14 @@ import user4 from "../assets/user4.jpeg";
 import user5 from "../assets/user5.jpeg";
 import user6 from "../assets/user6.jpeg";
 
-import {
-  RiBarChart2Line,
-  RiSettings2Line,
-  RiTeamLine,
-  RiTwitchLine,
-  RiYoutubeLine,
-  RiCalendarLine,
-} from "@remixicon/react";
+import { FaMicrochip } from "react-icons/fa6";
+import { FaMemory } from "react-icons/fa";
+import { BsGpuCard } from "react-icons/bs";
+import { BiSolidMemoryCard } from "react-icons/bi";
+import { FaBatteryThreeQuarters } from "react-icons/fa6";
+import { MdSmartDisplay } from "react-icons/md";
+
+
 import { code } from "framer-motion/client";
 
 export const HERO_CONTENT = {
@@ -123,45 +123,45 @@ export const KEY_FEATURES_CONTENT = {
   features: [
     {
       id: 1,
-      icon: <RiBarChart2Line className="w-8 h-8" />,
-      title: "Real-Time Stream Analytics",
+      icon: <FaMicrochip className="w-8 h-8" />,
+      title: "RAM",
       description:
-        "Track your audience engagement, viewer count, and performance in real-time.",
+        "1GB DDR3L",
     },
     {
       id: 2,
-      icon: <RiSettings2Line className="w-8 h-8" />,
-      title: "Automated Stream Management",
+      icon: <FaMemory className="w-8 h-8" />,
+      title: "CPU",
       description:
-        "Set up automated alerts, stream schedules, and more with ease.",
+        "RK3326 640bit Quad-Core 1.5GHz",
     },
     {
       id: 3,
-      icon: <RiTeamLine className="w-8 h-8" />,
-      title: "Audience Engagement Tools",
+      icon: <BsGpuCard className="w-8 h-8" />,
+      title: "GPU",
       description:
-        "Interact with your audience through custom alerts, chat integrations, and giveaways.",
+        "Mali-G31 MP2",
     },
     {
       id: 4,
-      icon: <RiTwitchLine className="w-8 h-8" />,
-      title: "Twitch Integration",
+      icon: <BiSolidMemoryCard className="w-8 h-8" />,
+      title: "Storage",
       description:
-        "Seamlessly connect with Twitch to automate alerts, manage subscribers, and track donations.",
+        "64GB + MicroSD Slot",
     },
     {
       id: 5,
-      icon: <RiYoutubeLine className="w-8 h-8" />,
-      title: "YouTube Streaming Support",
+      icon: <FaBatteryThreeQuarters className="w-8 h-8" />,
+      title: "Battery",
       description:
-        "Go live on YouTube with built-in tools for managing chats, subscribers, and more.",
+        "12 Hours of Gameplay",
     },
     {
       id: 6,
-      icon: <RiCalendarLine className="w-8 h-8" />,
-      title: "Schedule Streams",
+      icon: <MdSmartDisplay className="w-8 h-8" />,
+      title: "Display",
       description:
-        "Plan and schedule your streams ahead of time, with reminders sent to your audience.",
+        "3.5-inch Bright LCD Screen",
     },
   ],
 };

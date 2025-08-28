@@ -6,7 +6,7 @@ import { PageContext } from "../context/PageContext";
 import { useContext } from "react";
 
 
-const HowItWorks = () => {
+const PickYours = () => {
 
     const { setSelectedColor } = useContext(PageContext);
 
@@ -99,4 +99,4 @@ const HowItWorks = () => {
     )
 }
 
-export default HowItWorks
+export default PickYours

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { KEY_FEATURES_CONTENT } from "../constants"
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode  } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css"; // не забудь стили
 
 import gif1 from "../assets/gif_1.mp4";
@@ -11,10 +11,8 @@ import gif4 from "../assets/gif_4.mp4";
 import gif5 from "../assets/gif_5.mp4";
 import gif6 from "../assets/gif_6.mp4";
 import gif7 from "../assets/gif_7.mp4";
-// import gif8 from "../assets/gif_8.gif";
-// import gif1 from "../assets/gif_1.gif";
 
-const KeyFeatures = () => {
+const GamesShowCase = () => {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -160,4 +158,4 @@ const KeyFeatures = () => {
     )
 }
 
-export default KeyFeatures
+export default GamesShowCase
