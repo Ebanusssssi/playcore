@@ -173,7 +173,7 @@ const PricingPlans = () => {
                                     <span>{openSections[index] ? "−" : "+"}</span>
                                 </button>
                                 {openSections[index] && (
-                                    <div className="p-3 text-gray-300 bg-neutral-900 rounded-lg">{section.content}</div>
+                                    <div className="p-3 text-gray-300 bg-neutral-950 rounded-lg">{section.content}</div>
                                 )}
                                 </div>
                             ))}
