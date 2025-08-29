@@ -12,6 +12,13 @@ import purpleConsole from "../assets/purple.webp";
 import whiteConsole from "../assets/white.webp";
 import emeraldConsole from "../assets/emerald.webp";
 
+import applePay from "../assets/apple_pay.svg"
+import amex from "../assets/amex.svg"
+import googlePay from "../assets/google_pay.svg"
+import masterCard from "../assets/mastercard.svg"
+import shop from "../assets/shop.svg"
+import unionPay from "../assets/union_pay.svg"
+import visa from "../assets/visa.svg"
 
 import review_1 from "../assets/review_1.jpeg";
 import review_2 from "../assets/review_2.jpeg";
@@ -137,14 +144,14 @@ export const KEY_FEATURES_CONTENT = {
   features: [
     {
       id: 1,
-      icon: <FaMicrochip className="w-8 h-8" />,
+      icon: <FaMemory className="w-8 h-8" />,
       title: "RAM",
       description:
         "1GB DDR3L",
     },
     {
       id: 2,
-      icon: <FaMemory className="w-8 h-8" />,
+      icon: <FaMicrochip className="w-8 h-8" />,
       title: "CPU",
       description:
         "RK3326 640bit Quad-Core 1.5GHz",
@@ -320,57 +327,56 @@ export const TESTIMONIALS_CONTENT = {
 export const FOOTER_CONTENT = {
   sections: [
     {
-      title: "TOOLS & SERVICES",
+      title: "Quick Links",
       links: [
-        { text: "Real-time Analytics", url: "#" },
-        { text: "Customizable Alerts", url: "#" },
-        { text: "Integrated Chat Systems", url: "#" },
-        { text: "Instant Notifications", url: "#" },
-        { text: "Overlays & Visuals", url: "#" },
-        { text: "Mobile Streaming Support", url: "#" },
-        { text: "4K Stream Capabilities", url: "#" },
-        { text: "Stream Scheduling Tool", url: "#" },
+        { text: "Product", url: "#product" },
+        { text: "Colors", url: "#gallery" },
+        { text: "Details", url: "#fullDetails" },
+        { text: "Reviews", url: "#testimonials" },
       ],
     },
-    {
-      title: "SUPPORT & RESOURCES",
-      links: [
-        { text: "Subscription Plans", url: "#" },
-        { text: "Affiliate Program", url: "#" },
-        { text: "Frequently Asked Questions", url: "#" },
-        { text: "Company Blog", url: "#" },
-        { text: "Subscribe to Newsletter", url: "#" },
-        { text: "Latest Features", url: "#" },
-        { text: "Merchandise Store", url: "#" },
-        { text: "Workshops & Events", url: "#" },
-      ],
-    },
-    {
-      title: "CONNECT WITH US",
-      links: [
-        { text: "Twitter", url: "#" },
-        { text: "Facebook", url: "#" },
-        { text: "TikTok", url: "#" },
-        { text: "LinkedIn", url: "#" },
-        { text: "YouTube", url: "#" },
-        { text: "Twitch", url: "#" },
-        { text: "Discord", url: "#" },
-      ],
-    },
-    {
-      title: "LEARN & EXPLORE",
-      links: [
-        { text: "Engage Viewers with Custom Alerts", url: "#" },
-        { text: "Top Streaming Strategies for New Streamers", url: "#" },
-        { text: "How to Stream in 4K for Maximum Quality", url: "#" },
-        { text: "Efficient Stream Scheduling Techniques", url: "#" },
-        { text: "Using Analytics to Boost Engagement", url: "#" },
-        { text: "Create Stunning Overlays for Streams", url: "#" },
-        { text: "Advanced Analytics for Streamers: A Guide", url: "#" },
-      ],
-    },
+    // {
+    //   title: "SUPPORT & RESOURCES",
+    //   links: [
+    //     { text: "Subscription Plans", url: "#" },
+    //     { text: "Affiliate Program", url: "#" },
+    //     { text: "Frequently Asked Questions", url: "#" },
+    //     { text: "Company Blog", url: "#" },
+    //     { text: "Subscribe to Newsletter", url: "#" },
+    //     { text: "Latest Features", url: "#" },
+    //     { text: "Merchandise Store", url: "#" },
+    //     { text: "Workshops & Events", url: "#" },
+    //   ],
+    // },
+    // {
+    //   title: "CONNECT WITH US",
+    //   links: [
+    //     { text: "Twitter", url: "#" },
+    //     { text: "Facebook", url: "#" },
+    //     { text: "TikTok", url: "#" },
+    //     { text: "LinkedIn", url: "#" },
+    //     { text: "YouTube", url: "#" },
+    //     { text: "Twitch", url: "#" },
+    //     { text: "Discord", url: "#" },
+    //   ],
+    // },
+    // {
+    //   title: "LEARN & EXPLORE",
+    //   links: [
+    //     { text: "Engage Viewers with Custom Alerts", url: "#" },
+    //     { text: "Top Streaming Strategies for New Streamers", url: "#" },
+    //     { text: "How to Stream in 4K for Maximum Quality", url: "#" },
+    //     { text: "Efficient Stream Scheduling Techniques", url: "#" },
+    //     { text: "Using Analytics to Boost Engagement", url: "#" },
+    //     { text: "Create Stunning Overlays for Streams", url: "#" },
+    //     { text: "Advanced Analytics for Streamers: A Guide", url: "#" },
+    //   ],
+    // },
+  ],
+  paymentMethods: [
+    applePay, amex, googlePay, masterCard, shop, unionPay, visa
   ],
   platformsText:
     "Streaming Platforms | Twitch | YouTube | Discord | Facebook Gaming",
-  copyrightText: "© 2024 Streamerzz, Inc. All rights reserved.",
+  copyrightText: "© 2025 PlayCore All rights reserved.",
 };

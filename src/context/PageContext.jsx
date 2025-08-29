@@ -1,10 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const PageContext = createContext();
 
 const PageContextProvider = ({ children }) => {
-
-    const [selectedColor, setSelectedColor] = useState(() => {
+  const [isOpen, setIsOpen] = useState(false);  
+  const [selectedColor, setSelectedColor] = useState(() => {
     return localStorage.getItem("selectedColor") || "Blue";
   });
 
@@ -16,17 +16,19 @@ const PageContextProvider = ({ children }) => {
     }
   }, [selectedColor]);
 
-    const value = {
-        selectedColor,
-        setSelectedColor
+  const value = {
+    selectedColor,
+    setSelectedColor,
 
-    }
+    isOpen,
+    setIsOpen,
+  }
 
-    return (
-        <PageContext.Provider value={value}>
-            {children}
-        </PageContext.Provider>
-    )
+  return (
+      <PageContext.Provider value={value}>
+          {children}
+      </PageContext.Provider>
+  )
 
 }
 

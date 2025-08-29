@@ -5,10 +5,14 @@ import GamesShowCase from "../components/GamesShowCase"
 import Product from "../components/Product"
 import Testimonials from "../components/Testimonials"
 import FullDetails from "../components/FullDetails"
+import { useContext } from "react"
+import { PageContext } from "../context/PageContext"
 
 const Home = () => {
+  const { isOpen, setIsOpen } = useContext(PageContext);
+
   return (
-    <div>
+    <div onClick={() => setIsOpen(false)}>
         <HeroSection />
         <PickYours />
         <GamesShowCase />

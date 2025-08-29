@@ -26,6 +26,7 @@ const fadeIn = {
 const HeroSection = () => {
     return (
         <motion.section
+        id="hero"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -73,12 +74,12 @@ const HeroSection = () => {
                             <TbShoppingCartCopy className="-translate-x-5 opacity-0 size-0 group-hover:size-5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
                         </span>
                     </a>
-                    <a href="#" 
+                    {/* <a href="#" 
                     className="inline-block border border-white/20 bg-white/0 hover:bg-white/10
                     text-white py-3 px-5 rounded-lg font-black transition-all duration-300 ease-in-out"
                     >
                         <span className="select-none">{HERO_CONTENT.callToAction.secondary}</span>
-                    </a>
+                    </a> */}
                 </motion.div>
 
                 {/* <motion.div 
