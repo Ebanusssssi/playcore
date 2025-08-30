@@ -46,15 +46,15 @@ const Confirmation = () => {
       ];
 
   return (
-    <section className="bg-[#121212] relative">
+    <section className="h-screen bg-black md:bg-[#121212] relative">
       <HashLink to="/#product" className="fixed z-20 top-8 left-5 md:top-8 md:left-10 flex items-center gap-1 select-none">
         <IoIosArrowBack className="w-6 h-6" />
         <p className="">Back</p>
       </HashLink>
       <div className="max-w-7xl mx-auto md:px-4 select-none h-screen flex items-center justify-center">
-        <div className="flex flex-col w-full h-full md:h-2/3 bg-[#121212] [box-shadow:20px_20px_40px_#0e0e0e,_-20px_-20px_40px_#161616] rounded-xl md:rounded-[50px] overflow-hidden">
+        <div className="flex flex-col w-full h-full md:h-2/3 bg-black md:bg-[#121212] md:[box-shadow:20px_20px_40px_#0e0e0e,_-20px_-20px_40px_#161616] rounded-none md:rounded-[50px] overflow-hidden">
 
-          <div className="w-full h-full flex flex-col-reverse md:flex-row items-start relative overflow-y-scroll">
+          <div className="w-full h-screen md:h-full pb-20 flex flex-col-reverse md:flex-row items-start relative overflow-y-scroll">
 
             <div className="p-4 md:p-10 flex flex-col min-w-[40%] md:w-1/3 pb-4 rounded-xl transition-all duration-300 ease-in-out">
               <h2 className="text-3xl tracking-wide mb-10">Order Confirmation</h2>
