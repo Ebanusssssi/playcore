@@ -46,7 +46,7 @@ const Confirmation = () => {
       ];
 
   return (
-    <section className="h-screen bg-black md:bg-[#121212] relative">
+    <section className="h-max md:h-screen bg-black md:bg-[#121212] relative">
       <HashLink to="/#product" className="absolute z-20 top-8 left-5 md:top-8 md:left-10 flex items-center gap-1 select-none">
         <IoIosArrowBack className="w-6 h-6" />
         <p className="">Back</p>
