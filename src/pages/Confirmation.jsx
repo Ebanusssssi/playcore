@@ -46,8 +46,8 @@ const Confirmation = () => {
       ];
 
   return (
-    <section className="h-max md:h-screen bg-black md:bg-[#121212] relative">
-      <HashLink to="/#product" className="absolute z-20 top-8 left-5 md:top-8 md:left-10 flex items-center gap-1 select-none">
+    <section className="h-max bg-black md:bg-[#121212] overflow-y-auto relative ">
+      <HashLink smooth to="/#product" className="absolute z-20 top-8 left-5 md:top-8 md:left-10 flex items-center gap-1 select-none">
         <IoIosArrowBack className="w-6 h-6" />
         <p className="">Back</p>
       </HashLink>
@@ -57,16 +57,36 @@ const Confirmation = () => {
           <div className="w-full h-max md:h-full pb-20 md:pb-0 flex flex-col-reverse md:flex-row items-start relative overflow-auto md:overflow-y-scroll">
 
             <div className="p-4 md:p-10 flex flex-col min-w-[40%] md:w-1/3 pb-4 rounded-xl transition-all duration-300 ease-in-out">
-              <h2 className="text-3xl tracking-wide mb-10">Order Confirmation</h2>
+              <h2 className="text-3xl tracking-wide mb-6 md:mb-10">Order Confirmation</h2>
               {/* Your Selection */}
-              <div className="flex flex-col items-start gap-4 mb-8">
+              <div className="flex flex-col items-start gap-2 md:gap-4 mb-6 md:mb-8">
                 <h3 className="text-lg">Your selection</h3>
-                <div className="flex items-center gap-4">
-                  <div 
-                    className="w-10 h-10 rounded-lg transition-all duration-300 ease-in-out" 
-                    style={{  backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color }}></div>
-                  <span className="text-base">{selectedColor}</span>
+                <div className="flex items-center gap-2 md:gap-4 flex-wrap lg:flex-nowrap">
+                  {/* <div 
+                    className="border-2 border-white w-10 h-10 rounded-lg transition-all duration-300 ease-in-out" 
+                    style={{  backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color }}></div> */}
+                  <div className="size-24 min-w-max overflow-hidden border-0 border-white rounded-md">
+                    <img 
+                    src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} 
+                    alt="console" 
+                    className="w-full h-full object-cover object-center rounded-xl md:rounded-[50px]" />
+                  </div>
+                  <div className="w-full flex flex-col items-start gap-1 md:gap-2 text-nowrap">
+                    <div className="flex items-center gap-2">
+                      <h4 className="text-neutral-400">Product:</h4>
+                      <span className="text-base">PlayCore Console</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <h4 className="text-neutral-400">Color:</h4>
+                      <span className="text-base">{selectedColor}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <h4 className="text-neutral-400">Quantity:</h4>
+                      <span className="text-base">x 1</span>
+                    </div>
+                  </div>
                 </div>
+                
               </div>
 
               {/* Refund & Delovery Policy */}
@@ -76,7 +96,7 @@ const Confirmation = () => {
                   {sections.map((section, index) => (
                       <div key={index} className="">
                       <button
-                          className="w-full flex justify-between items-center py-3 font-semibold group"
+                          className="w-full flex justify-between items-center py-2 md:py-3 font-semibold group"
                           onClick={() => toggleSection(index)}
                       >
                           <span 
@@ -87,7 +107,7 @@ const Confirmation = () => {
                           <span>{openSections[index] ? "−" : "+"}</span>
                       </button>
                       {openSections[index] && (
-                          <div className="p-3 text-gray-300 rounded-lg">{section.content}</div>
+                          <div className="p-2 md:p-3 text-gray-300 rounded-lg">{section.content}</div>
                       )}
                       </div>
                   ))}
@@ -105,8 +125,8 @@ const Confirmation = () => {
               </div> */}
 
               {/* All Colors */}
-              <div className="w-full flex flex-col items-start gap-2 mt-8">
-                  <span className="text-xs text-nwhite">Other Colors:</span>
+              <div className="w-full flex flex-col items-start gap-4 mt-8">
+                  <span className="text-xs">Other Colors:</span>
                   <div className="w-full px-0 flex items-center justify-start gap-x-2 gap-y-2 flex-wrap">
                       {HOW_IT_WORKS_CONTENT.steps.map((color, index) => (
                           <button 

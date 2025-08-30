@@ -11,8 +11,6 @@ const PageContextProvider = ({ children }) => {
   useEffect(() => {
     if (selectedColor) {
       localStorage.setItem("selectedColor", selectedColor);
-      console.log(selectedColor);
-      
     }
   }, [selectedColor]);
 
