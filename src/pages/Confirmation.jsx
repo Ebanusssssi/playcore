@@ -65,11 +65,11 @@ const Confirmation = () => {
                   {/* <div 
                     className="border-2 border-white w-10 h-10 rounded-lg transition-all duration-300 ease-in-out" 
                     style={{  backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color }}></div> */}
-                  <div className="size-24 min-w-24 overflow-hidden border-0 border-white rounded-md">
+                  <div className="h-24 w-24 min-w-24 overflow-hidden border-0 border-white rounded-md">
                     <img 
                     src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} 
                     alt="console" 
-                    className="w-full h-full object-cover object-center rounded-xl md:rounded-[50px]" />
+                    className="w-full h-full object-cover object-center" />
                   </div>
                   <div className="w-full flex flex-col items-start gap-1 md:gap-2 text-nowrap">
                     <div className="flex items-center gap-2">
