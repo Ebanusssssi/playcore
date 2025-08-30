@@ -138,9 +138,6 @@ export const HOW_IT_WORKS_CONTENT = {
 };
 
 export const KEY_FEATURES_CONTENT = {
-  sectionTitle: "Non Stop Action. Infinite Games.",
-  sectionDescription:
-    "Everything you need to enhance your streaming experience, all in one place.",
   features: [
     {
       id: 1,
@@ -183,55 +180,6 @@ export const KEY_FEATURES_CONTENT = {
       title: "Display",
       description:
         "3.5-inch Bright LCD Screen",
-    },
-  ],
-};
-
-export const PLANS_CONTENT = {
-  sectionTitle: "Choose Your Plan",
-  sectionDescription:
-    "Streamerzz offers flexible pricing plans to fit every streamer’s needs, from beginner to pro.",
-  popularBadge: "Most Popular",
-  ctaText: "Get Started",
-  plans: [
-    {
-      name: "Basic",
-      price: "$9.99/month",
-      description:
-        "Perfect for beginners just starting their streaming journey.",
-      features: [
-        "Basic analytics",
-        "Custom overlays",
-        "Viewer engagement tools",
-        "Stream up to 720p",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "$19.99/month",
-      description:
-        "For streamers who want more advanced tools to grow their audience.",
-      features: [
-        "Advanced analytics",
-        "Custom alerts & notifications",
-        "HD streaming up to 1080p",
-        "Real-time audience insights",
-        "Unlimited support",
-      ],
-      popular: true,
-    },
-    {
-      name: "Elite",
-      price: "$49.99/month",
-      description:
-        "For professional streamers who need cutting-edge tools and insights.",
-      features: [
-        "Premium analytics & reporting",
-        "4K Ultra HD streaming",
-        "Dedicated account manager",
-        "Full API access",
-        "Custom branding & overlays",
-      ],
     },
   ],
 };
@@ -335,43 +283,6 @@ export const FOOTER_CONTENT = {
         { text: "Reviews", url: "#testimonials" },
       ],
     },
-    // {
-    //   title: "SUPPORT & RESOURCES",
-    //   links: [
-    //     { text: "Subscription Plans", url: "#" },
-    //     { text: "Affiliate Program", url: "#" },
-    //     { text: "Frequently Asked Questions", url: "#" },
-    //     { text: "Company Blog", url: "#" },
-    //     { text: "Subscribe to Newsletter", url: "#" },
-    //     { text: "Latest Features", url: "#" },
-    //     { text: "Merchandise Store", url: "#" },
-    //     { text: "Workshops & Events", url: "#" },
-    //   ],
-    // },
-    // {
-    //   title: "CONNECT WITH US",
-    //   links: [
-    //     { text: "Twitter", url: "#" },
-    //     { text: "Facebook", url: "#" },
-    //     { text: "TikTok", url: "#" },
-    //     { text: "LinkedIn", url: "#" },
-    //     { text: "YouTube", url: "#" },
-    //     { text: "Twitch", url: "#" },
-    //     { text: "Discord", url: "#" },
-    //   ],
-    // },
-    // {
-    //   title: "LEARN & EXPLORE",
-    //   links: [
-    //     { text: "Engage Viewers with Custom Alerts", url: "#" },
-    //     { text: "Top Streaming Strategies for New Streamers", url: "#" },
-    //     { text: "How to Stream in 4K for Maximum Quality", url: "#" },
-    //     { text: "Efficient Stream Scheduling Techniques", url: "#" },
-    //     { text: "Using Analytics to Boost Engagement", url: "#" },
-    //     { text: "Create Stunning Overlays for Streams", url: "#" },
-    //     { text: "Advanced Analytics for Streamers: A Guide", url: "#" },
-    //   ],
-    // },
   ],
   paymentMethods: [
     applePay, amex, googlePay, masterCard, shop, unionPay, visa

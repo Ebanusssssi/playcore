@@ -14,6 +14,7 @@ import { CgGames } from "react-icons/cg";
 
 
 import { HOW_IT_WORKS_CONTENT } from "../constants"
+import { Link } from "react-router-dom";
 
 
 
@@ -144,7 +145,7 @@ const PricingPlans = () => {
                             </div>
                         </div>
 
-                        <button
+                        <Link to="/confirmation"
                             className="mt-8 block shiny-border
                             drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
                             text-white py-3 px-5 rounded-lg font-black
@@ -155,7 +156,7 @@ const PricingPlans = () => {
                                 <TbShoppingCartCopy className="size-6" />
                                 <span className="text-lg text-nowrap">{selectedColor}</span> 
                             </div>
-                        </button>
+                        </Link>
 
 
                         <div className="w-full mt-3">
@@ -195,7 +196,7 @@ const PricingPlans = () => {
                         </h2>
                         <img 
                             src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} 
-                            alt="blueConsole" 
+                            alt="console" 
                             className="w-full h-full object-cover object-center" />
                     </div>
                 </div>
