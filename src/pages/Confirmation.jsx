@@ -148,12 +148,14 @@ const Confirmation = () => {
                   </div>
               </div>
 
-              <a href="#"
-                  className="mt-8 block shiny-border
-                  drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
-                  text-white py-3 px-5 rounded-lg font-black
-                  group text-center relative overflow-hidden"
-                  > 
+              <a 
+                href="https://buy.stripe.com/9B628t8bra7vd8HdHe2sM01" 
+                target="_blank" rel="noopener noreferrer"
+                className="mt-8 block shiny-border
+                drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
+                text-white py-3 px-5 rounded-lg font-black
+                group text-center relative overflow-hidden"
+                > 
                   <p className="text-lg">Confirm & Proceed</p>
               </a>
 
