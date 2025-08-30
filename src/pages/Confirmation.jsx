@@ -47,7 +47,7 @@ const Confirmation = () => {
 
   return (
     <section className="h-max bg-black md:bg-[#121212] overflow-y-auto relative ">
-      <HashLink smooth to="/#product" className="absolute z-20 top-8 left-5 md:top-8 md:left-10 flex items-center gap-1 select-none">
+      <HashLink smooth to="/#product" className="fixed z-20 top-8 left-5 md:top-8 md:left-10 flex items-center gap-1 select-none">
         <IoIosArrowBack className="w-6 h-6" />
         <p className="">Back</p>
       </HashLink>
@@ -65,7 +65,7 @@ const Confirmation = () => {
                   {/* <div 
                     className="border-2 border-white w-10 h-10 rounded-lg transition-all duration-300 ease-in-out" 
                     style={{  backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color }}></div> */}
-                  <div className="size-24 min-w-max overflow-hidden border-0 border-white rounded-md">
+                  <div className="size-24 min-w-24 overflow-hidden border-0 border-white rounded-md">
                     <img 
                     src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} 
                     alt="console" 
