@@ -52,7 +52,7 @@ const Confirmation = () => {
         <p className="">Back</p>
       </HashLink>
       <div className="max-w-7xl mx-auto md:px-4 select-none h-screen flex items-center justify-center">
-        <div className="flex flex-col w-full h-full md:h-2/3 bg-black md:bg-[#121212] md:[box-shadow:20px_20px_40px_#0e0e0e,_-20px_-20px_40px_#161616] rounded-none md:rounded-[50px] overflow-hidden">
+        <div className="flex flex-col w-full h-full md:h-2/3 bg-black md:bg-[#121212] md:[box-shadow:20px_20px_40px_#0e0e0e,_-20px_-20px_40px_#161616] rounded-none md:rounded-[50px] md:overflow-hidden">
 
           <div className="w-full h-screen md:h-full pb-20 flex flex-col-reverse md:flex-row items-start relative overflow-y-scroll">
 
