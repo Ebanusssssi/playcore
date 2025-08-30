@@ -154,7 +154,7 @@ const Confirmation = () => {
                   text-white py-3 px-5 rounded-lg font-black
                   group text-center relative overflow-hidden"
                   > 
-                  <p className="text-lg">Complete Purchase</p>
+                  <p className="text-lg">Confirm & Proceed</p>
               </a>
 
             </div>
