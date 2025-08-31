@@ -67,6 +67,10 @@ const Confirmation = () => {
                   </div>
                   <div className="w-full flex flex-col items-start gap-1 md:gap-0 text-nowrap">
                     <div className="flex items-center gap-2">
+                      <h4 className="text-neutral-400">Price:</h4>
+                      <span className="text-base flex items-center gap-2 text-pink-500 font-normal">€40.00 <div className="relative text-xs text-white">€80.00<div className="absolute h-[1px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></div></span>
+                    </div>
+                    <div className="flex items-center gap-2">
                       <h4 className="text-neutral-400">Product:</h4>
                       <span className="text-base">PlayCore Console</span>
                     </div>
