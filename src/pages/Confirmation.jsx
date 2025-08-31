@@ -1,20 +1,14 @@
 import { useContext, useState } from "react"
-
-import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link";
-
 import { TbTruckReturn, TbTruckDelivery } from "react-icons/tb"
 import { IoIosArrowBack } from "react-icons/io";
-
 import { HOW_IT_WORKS_CONTENT } from "../constants"
-
-
 import { PageContext } from "../context/PageContext"
 
 const Confirmation = () => {
   const { selectedColor, setSelectedColor } = useContext(PageContext);
-
   const [openSections, setOpenSections] = useState({});
+  const selectedItem = HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor);
 
   const toggleSection = (index) => {
       setOpenSections((prev) => ({
@@ -56,7 +50,7 @@ const Confirmation = () => {
 
           <div className="w-full h-max md:h-full pb-20 md:pb-0 flex flex-col-reverse md:flex-row items-start relative overflow-auto md:overflow-y-scroll">
 
-            <div className="p-4 md:p-10 flex flex-col min-w-[40%] md:w-1/3 pb-4 rounded-xl transition-all duration-300 ease-in-out">
+            <div className="w-full p-4 md:p-10 flex flex-col min-w-[40%] md:w-1/3 pb-4 rounded-xl transition-all duration-300 ease-in-out">
               <h2 className="text-3xl tracking-wide mb-6 md:mb-10">Order Confirmation</h2>
               {/* Your Selection */}
               <div className="flex flex-col items-start gap-2 md:gap-4 mb-6 md:mb-8">
@@ -64,14 +58,14 @@ const Confirmation = () => {
                 <div className="flex items-center gap-2 md:gap-4 flex-wrap lg:flex-nowrap">
                   {/* <div 
                     className="border-2 border-white w-10 h-10 rounded-lg transition-all duration-300 ease-in-out" 
-                    style={{  backgroundColor: HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.color }}></div> */}
-                  <div className="h-24 w-24 min-w-24 overflow-hidden border-0 border-white rounded-md">
+                    style={{  backgroundColor: selectedItem?.color }}></div> */}
+                  <div className="h-24 w-24 min-w-24 md:h-24 md:w-24 md:min-w-24 overflow-hidden border-0 border-white rounded-md">
                     <img 
-                    src={HOW_IT_WORKS_CONTENT.steps.find((step) => step.code === selectedColor)?.imageSrc} 
+                    src={selectedItem?.imageSrc} 
                     alt="console" 
                     className="w-full h-full object-cover object-center" />
                   </div>
-                  <div className="w-full flex flex-col items-start gap-1 md:gap-2 text-nowrap">
+                  <div className="w-full flex flex-col items-start gap-1 md:gap-0 text-nowrap">
                     <div className="flex items-center gap-2">
                       <h4 className="text-neutral-400">Product:</h4>
                       <span className="text-base">PlayCore Console</span>
@@ -124,7 +118,20 @@ const Confirmation = () => {
                   </div>
               </div> */}
 
-              {/* All Colors */}
+             
+
+              <a 
+                href={selectedItem.paymentLink}
+                target="_blank" rel="noopener noreferrer"
+                className="mt-8 block shiny-border
+                drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
+                text-white py-3 px-5 rounded-lg font-black
+                group text-center relative overflow-hidden"
+                > 
+                  <p className="text-lg">Confirm & Proceed</p>
+              </a>
+
+               {/* All Colors */}
               <div className="w-full flex flex-col items-start gap-4 mt-8">
                   <span className="text-xs">Other Colors:</span>
                   <div className="w-full px-0 flex items-center justify-start gap-x-2 gap-y-2 flex-wrap">
@@ -147,18 +154,6 @@ const Confirmation = () => {
                       ))}
                   </div>
               </div>
-
-              <a 
-                href="https://buy.stripe.com/9B628t8bra7vd8HdHe2sM01" 
-                target="_blank" rel="noopener noreferrer"
-                className="mt-8 block shiny-border
-                drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]
-                text-white py-3 px-5 rounded-lg font-black
-                group text-center relative overflow-hidden"
-                > 
-                  <p className="text-lg">Confirm & Proceed</p>
-              </a>
-
             </div>
 
             <div className="w-full h-full rounded-[50px] md:overflow-hidden md:sticky md:top-0">
