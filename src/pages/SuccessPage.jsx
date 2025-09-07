@@ -102,9 +102,9 @@ const SuccessPage = () => {
         initial={{ scale: 0.8, opacity: 0, width: "30%" }}
         animate={{ scale: 1, opacity: 1, width: "100%" }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="mt-10 p-1 h-max w-full rounded-lg text-center shiny-border"
+        className="mt-10 py-1 h-max w-full rounded-lg text-center shiny-border"
       >
-        <div className="p-3 md:p-6 bg-black rounded-xl w-max h-full justify-self-center md:border-2 border-dashed border-cyan-400">
+        <div className="py-3 md:p-6 bg-black rounded-xl w-full md:w-max h-full justify-self-center md:border-2 border-dashed border-cyan-400">
             <h2 className="text-sm md:text-lg font-semibold mb-2 drop-shadow-lg select-none">
             Here’s a special gift for your next purchase!
             </h2>
