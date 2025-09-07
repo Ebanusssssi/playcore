@@ -104,8 +104,8 @@ const SuccessPage = () => {
         transition={{ delay: 0.6, duration: 0.6 }}
         className="mt-10 p-1 h-max w-full rounded-lg text-center shiny-border"
       >
-        <div className="p-6 bg-black rounded-xl w-max h-full justify-self-center border-2 border-dashed border-cyan-400">
-            <h2 className="text-lg font-semibold mb-2 drop-shadow-lg select-none">
+        <div className="p-3 md:p-6 bg-black rounded-xl w-max h-full justify-self-center md:border-2 border-dashed border-cyan-400">
+            <h2 className="text-sm md:text-lg font-semibold mb-2 drop-shadow-lg select-none">
             Here’s a special gift for your next purchase!
             </h2>
             <div 
@@ -120,7 +120,7 @@ const SuccessPage = () => {
                     : <IoCopy className="text-base inline-block text-neutral-300" />
                 }
             </div>
-            <p className="mt-2 text-sm select-none text-neutral-600">
+            <p className="mt-2 text-xs md:text-sm select-none text-neutral-600">
             Use the promo code to get your next order.{" "}
             <span className="text-cyan-400">10% OFF</span>
             </p>
