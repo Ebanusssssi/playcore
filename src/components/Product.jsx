@@ -36,8 +36,8 @@ const PricingPlans = () => {
             icon: <TbTruckDelivery className="w-6 h-6" />,
             content: (
                 <p className="pb-4">
-                    Our standard delivery is 5-15 business days within the Europe, with tracking provided. 
-                    Free standard shipping is included.
+                    Our standard delivery is 5-15 business days Worldwide, with tracking provided. 
+                    Free standard shipping included.
                 </p>
             ) 
         },
