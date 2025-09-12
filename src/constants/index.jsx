@@ -84,7 +84,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "Yellow",
       color: "#f3ac14",
       code: "Yellow",
-      paymentLink: "https://buy.stripe.com/9B628t8bra7vd8HdHe2sM01",
+      paymentLink: "https://buy.stripe.com/eVqbJ3fDT2F36KjcDa2sM0g",
     },
     {
       title: "Midnight",
@@ -92,7 +92,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "Midnight",
       color: "#24282e",
       code: "Midnight",
-      paymentLink: "https://buy.stripe.com/3cIbJ3gHX6Vj1pZ0Us2sM07",
+      paymentLink: "https://buy.stripe.com/9B6aEZ8brgvT8SrgTq2sM0a",
 
     },
     {
@@ -101,7 +101,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "Crimson",
       color: "#e80b1a",
       code: "Crimson",
-      paymentLink: "https://buy.stripe.com/fZueVfajz7ZnfgPgTq2sM06",
+      paymentLink: "https://buy.stripe.com/5kQ9AV77n3J7gkT7iQ2sM0b",
     },
     {
       title: "Blue",
@@ -109,7 +109,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "Blue",
       color: "#2f82fa",
       code: "Blue",
-      paymentLink: "https://buy.stripe.com/14A28tajz93r2u38mU2sM05",
+      paymentLink: "https://buy.stripe.com/eVqfZjajzenL5GfgTq2sM0c",
     },
     {
       title: "Orange",
@@ -117,7 +117,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "Orange",
       color: "#de4905",
       code: "Orange",
-      paymentLink: "https://buy.stripe.com/6oUeVfcrHgvT0lV46E2sM08",
+      paymentLink: "https://buy.stripe.com/fZu6oJ2R7enL6KjeLi2sM09",
     },
     {
       title: "Purple",
@@ -125,7 +125,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "Purple",
       color: "#a38df8",
       code: "Purple",
-      paymentLink: "https://buy.stripe.com/8x24gB0IZ93rd8H32A2sM04",
+      paymentLink: "https://buy.stripe.com/28E00lcrH93r7OngTq2sM0d",
     },
     {
       title: "White",
@@ -133,7 +133,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "White",
       color: "#dee1e7",
       code: "White",
-      paymentLink: "https://buy.stripe.com/aFa8wRajz3J75Gf46E2sM03",
+      paymentLink: "https://buy.stripe.com/cNi8wRgHXenL8Srbz62sM0e",
     },
     {
       title: "Emerald",
@@ -141,7 +141,7 @@ export const HOW_IT_WORKS_CONTENT = {
       imageAlt: "Emerald",
       color: "#13ead9",
       code: "Emerald",
-      paymentLink: "https://buy.stripe.com/9B64gB9fvcfDb0z5aI2sM02",
+      paymentLink: "https://buy.stripe.com/00wfZjbnD2F34Cb7iQ2sM0f",
     },
   ],
 };

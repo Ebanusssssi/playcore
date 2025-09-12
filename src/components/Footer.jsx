@@ -48,8 +48,9 @@ const Footer = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="text-xs">
+                    <div className="text-xs flex flex-col-reverse md:flex-row w-full justify-center items-center gap-6 md:gap-10">
                         <p className="text-neutral-400 px-2 w-max">{FOOTER_CONTENT.copyrightText}</p>
+                        <a href="mailto:themainproductassistance@gmail.com" target="_blanc" className="text-neutral-400 px-2 w-max mb-0">themainproductassistance@gmail.com</a>
                     </div>
                 </div>
             </div>

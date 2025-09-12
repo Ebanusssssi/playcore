@@ -36,8 +36,8 @@ const PricingPlans = () => {
             icon: <TbTruckDelivery className="w-6 h-6" />,
             content: (
                 <p className="pb-4">
-                    Our standard delivery is 3-8 business days within the United Kingdom, with tracking provided. 
-                    Free standard shipping is included, and express shipping is available for $9.99
+                    Our standard delivery is 5-15 business days within the Europe, with tracking provided. 
+                    Free standard shipping is included.
                 </p>
             ) 
         },
@@ -50,7 +50,7 @@ const PricingPlans = () => {
                     <li>RAM:  <span className="text-xs font-normal text-neutral-400">1GB DDR3L</span></li>
                     <li>Display:  <span className="text-xs font-normal text-neutral-400">3.5" IPS HD</span></li>
                     <li>GPU:  <span className="text-xs font-normal text-neutral-400">Mali-G31 MP2</span></li>
-                    <li>Storage:  <span className="text-xs font-normal text-neutral-400">64GB Internal Memory + Expandable via MicroSD (up to 256GB)</span></li>
+                    <li>Storage:  <span className="text-xs font-normal text-neutral-400">128GB Internal Memory + Expandable via MicroSD (up to 256GB)</span></li>
                     <li>Battery:  <span className="text-xs font-normal text-neutral-400">3200mAh ~ 12 Hours of Gameplay (per charge)</span></li>
                 </ul>
             )
@@ -108,8 +108,8 @@ const PricingPlans = () => {
                             PlayCore Console
                         </h2>
                         <div className="flex flex-wrap items-center space-x-4 my-0 my-6 lg:my-4 md:mb-0">
-                            <span className="text-lg font-semibold text-pink-500">$40.00</span>
-                            <span className="text-lg font-semibold relative">$80.00 <div className="absolute h-[2px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></span>
+                            <span className="text-lg font-semibold text-pink-500">€59.99</span>
+                            <span className="text-lg font-semibold relative">€120.00 <div className="absolute h-[2px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></span>
                             <div className="flex items-center bg-pink-500/20 px-4 py-2 rounded-full font-semibold animate-pulse border border-pink-500/40">
                                 <FaTags className="text-pink-500 mr-1 lg:mr-2 text-sm -scale-x-100" />
                                 <span className="text-xs lg:text-sm text-pink-500 text-nowrap back">SAVE 50%</span>

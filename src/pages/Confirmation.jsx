@@ -23,8 +23,8 @@ const Confirmation = () => {
               icon: <TbTruckDelivery className="w-6 h-6" />,
               content: (
                   <p className="pb-4">
-                      Our standard delivery is 3-8 business days within the United Kingdom, with tracking provided. 
-                      Free standard shipping is included, and express shipping is available for $9.99
+                      Our standard delivery is 5-15 business days within the Europe, with tracking provided. 
+                      Free standard shipping is included.
                   </p>
               ) 
           },
@@ -68,7 +68,7 @@ const Confirmation = () => {
                   <div className="w-full flex flex-col items-start gap-1 md:gap-0 text-nowrap">
                     <div className="flex items-center gap-2">
                       <h4 className="text-neutral-400">Price:</h4>
-                      <span className="text-base flex items-center gap-2 text-pink-500 font-normal">€40.00 <div className="relative text-xs text-white">€80.00<div className="absolute h-[1px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></div></span>
+                      <span className="text-base flex items-center gap-2 text-pink-500 font-normal">€59.99 <div className="relative text-xs text-white">€120.00<div className="absolute h-[1px] w-full bg-pink-500 top-1/2 -translate-y-1/2 rotate-12"></div></div></span>
                     </div>
                     <div className="flex items-center gap-2">
                       <h4 className="text-neutral-400">Product:</h4>
